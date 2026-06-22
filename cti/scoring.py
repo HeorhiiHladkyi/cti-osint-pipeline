@@ -93,6 +93,24 @@ def score_ioc(r: IoCResult) -> IoCResult:
         # threat verdict for a wallet requires a paid reputation feed (Arkham/Chainalysis);
         # keyless on-chain data is attribution/context, not a maliciousness signal.
 
+    rep = _data(r.sources, "wallet_reputation")
+    if rep:
+        cat = rep.get("category")
+        weights = {"sanctions": 80, "ransomware": 70, "scam": 45, "fraud": 45, "mixer": 25}
+        if rep.get("listed") and cat:
+            score += weights.get(cat, 40)
+            reasons.append(f"Репутація гаманця: {rep.get('label')} [{cat}] — джерело: {rep.get('source')}")
+            corroborations += 1
+            mitre.append({"id": "T1657", "name": "Financial Theft"})
+        ca = rep.get("chainabuse")
+        if ca and ca.get("reports"):
+            score += min(30, int(ca["reports"]) * 6)
+            cats = ", ".join(ca.get("categories", [])) or "abuse"
+            reasons.append(f"Chainabuse: {ca['reports']} звітів про зловживання ({cats})")
+            corroborations += 1
+            if not (rep.get("listed") and cat):
+                mitre.append({"id": "T1657", "name": "Financial Theft"})
+
     oh = _data(r.sources, "origin_hunt")
     if oh and oh.get("candidates"):
         r.origin_candidates = oh["candidates"]

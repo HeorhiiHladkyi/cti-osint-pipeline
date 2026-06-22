@@ -271,6 +271,54 @@ def blockchain(indicator: str, ioc_type: str) -> SourceResult:
     return fail("blockchain", f"unsupported type {ioc_type}")
 
 
+_THREAT_DB: dict | None = None
+
+
+def _load_threat_db() -> dict:
+    global _THREAT_DB
+    if _THREAT_DB is None:
+        import json
+        from pathlib import Path
+        p = Path(__file__).resolve().parents[1] / "data" / "crypto_threat_intel.json"
+        try:
+            _THREAT_DB = json.loads(p.read_text(encoding="utf-8")).get("addresses", {})
+        except Exception:
+            _THREAT_DB = {}
+    return _THREAT_DB
+
+
+def _chainabuse(addr: str) -> dict | None:
+    """Optional keyed lookup — Chainabuse scam/abuse reports. Returns None if no key/fail."""
+    from ..config import settings
+    if not settings.chainabuse_key:
+        return None
+    ok_, data, _ = http_get("https://api.chainabuse.com/v0/reports",
+                            headers={"Authorization": f"Basic {settings.chainabuse_key}"},
+                            params={"address": addr, "page": 1, "perPage": 10}, timeout=15)
+    if not ok_ or not isinstance(data, dict):
+        return None
+    reports = data.get("reports", data if isinstance(data, list) else [])
+    cats = sorted({r.get("scamCategory") or r.get("category") for r in reports if isinstance(r, dict)} - {None})
+    return {"reports": len(reports), "categories": cats}
+
+
+def wallet_reputation(indicator: str, ioc_type: str) -> SourceResult:
+    """Reputation of a crypto wallet: bundled known-bad list (keyless) + Chainabuse (keyed)."""
+    if ioc_type not in ("btc", "eth"):
+        return fail("wallet_reputation", f"unsupported type {ioc_type}")
+    key = indicator.lower() if ioc_type == "eth" else indicator
+    db = _load_threat_db()
+    hit = db.get(key) or db.get(indicator)
+    out: dict = {"listed": bool(hit)}
+    if hit:
+        out.update({"category": hit.get("category"), "label": hit.get("label"),
+                    "source": hit.get("source")})
+    ca = _chainabuse(indicator)
+    if ca:
+        out["chainabuse"] = ca
+    return ok("wallet_reputation", out)
+
+
 def urlscan(indicator: str, ioc_type: str) -> SourceResult:
     host = host_of(indicator) if ioc_type == "url" else indicator
     q = f"page.domain:{host}" if ioc_type in ("domain", "url") else f"page.ip:{indicator}"

@@ -30,7 +30,7 @@
 <header>
   <h1>Звіт CTI — збагачення індикаторів (IoC)</h1>
   <div class="meta">
-    Згенеровано 2026-06-22T13:49:11.336395+00:00 · 2 індикатор(ів) ·
+    Згенеровано 2026-06-22T13:56:29.805904+00:00 · 2 індикатор(ів) ·
     Загальний рівень загрози: <span class="lvl low">low</span>
   </div>
 </header>
@@ -47,6 +47,8 @@
       <span class="chip">otx: ні</span>
     
       <span class="chip">urlscan: так</span>
+    
+      <span class="chip">wallet_rep: так</span>
     
     <div class="small" style="margin-top:8px">Безключові джерела (DNS, WHOIS, crt.sh, RDAP, URLScan) працюють завжди; джерела з ключем пропускаються за відсутності ключа.</div>
   </div>
@@ -97,6 +99,12 @@
           <td>blockchain</td>
           <td><span class="src-ok">ок</span></td>
           <td class="small"><code>{"address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", "balance": 107.22355824, "chain": "BTC", "counterparties": ["bc1penvmz9ty9u677hz8375lq7zphextkuqrdfm7ph9ms0hg2p7ue99qywqd86", "bc1pz3y4pzem68avexjxa9jksfk4k9h9ve2pekwzse2fju6zl9ptx9wqrg09zx", "bc1p3ug2fmjeek3f7klpcqw3z205cxddqqq36mdk7vj2uzcu3lfey3kqpctnwa", "bc1pldy7mrej5y2gzgyf5fdswwfl2jgeyc9elgerelq0hh32dnte99hsp5svt3", "bc1p4gctjq7ana5wj4t7jtxk4y3cmxhjgngg5q5uj45ky5wc9t77nl8sv5fdh7", "bc1puu6j7lavkal3mdm800f0xr6mw7xalnlfg2cgu09gnvl976tpv5gqqt8p4d", "bc1prz92sgn5evnfnhjq943su6w2c62w994cakapemetvjl3lkqraqks8r43fz", "bc1pl5hwez6f95sh5j692g7ks2lny3kfgmnq5wuja6lgw2z4p8p7nf5s4vcgjt"], "currency": "BTC", "first_seen": "2026-06-22", "last_seen": "2026-06-22", "sample_tx": ["ac84e693d212f63759986207ff001ebaf372c6c0f292479dc88dab736d3b01a4", "d9d9e5b5b6170546827406a08cb28324c139fab68115866cb342608ad71b0b2d", "5eb6b706286a0bc85cea8890a1b8bf5b19391da6ed453b1cbc987737fd128fd8", "f14963b2f0a1f0f58ac36cfa7e83b748ff0fed005eb3c7bce50b5dcf0e268cd7", "9b75175eb8805f86a8f4054144febdc6f7cf66e0c989374535052e7d951921a2"], "total_received": 107.22355824, "total_sent": 0.0, "tx_count": 63254}</code></td>
+        </tr>
+      
+        <tr>
+          <td>wallet_reputation</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"listed": false}</code></td>
         </tr>
       
       </tbody>
@@ -154,6 +162,12 @@
           <td class="small"><code>{"address": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359", "balance": 2.72137622, "chain": "ETH", "counterparties": ["0x2CfF890f0378a11913B6129B2E97417a2c302680", "0xE4D016a59D26c0448Afb6518E26004d284249fB8", "0x89E4B0A2cE9d26f303CD2Bed46bd9F6598a006a3", "0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb", "0x154004ddcBf5A7e0dE25436B8D9e2e0b3C129cC5", "0xac20D403389BDf611b87e11a7A278AC1A9E25760", "0x90AdB27C2177fC6eD52971Bd829155D21c8B0d16"], "currency": "ETH", "first_seen": null, "last_seen": "2026-05-22", "sample_tx": ["0xdea65dc1f7f50d8a058c91762afaaf6e278d6904d24848bfccc8ee970da3d7ac", "0x53d513d83a78de5e580115d288f97398825e3e25ed127959f3bfaae9f1f22040", "0xefd423603be9e97d19652d867bf188b97a11ac80170f0b09bb64360e88355b31", "0xb90f4dbcd9533127a66f943248bc2abe513e2ab115369a5a5686785e05359c6a", "0x6f638f9e43ddc03d920e4aa40001592cdd6a7d16337fce41baf1d7fb9542d817"], "total_received": null, "total_sent": null, "tx_count": 1414}</code></td>
         </tr>
       
+        <tr>
+          <td>wallet_reputation</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"listed": false}</code></td>
+        </tr>
+      
       </tbody>
     </table>
 
@@ -164,7 +178,7 @@
   
 
   <div class="panel small">
-    Артефакти: <code>output\2026-06-22_16-49-08</code> — raw/ (JSON по кожному джерелу), evidence.sqlite, graph.html,
+    Артефакти: <code>output\2026-06-22_16-56-25</code> — raw/ (JSON по кожному джерелу), evidence.sqlite, graph.html,
     stix_bundle.json, iocs.json. Фінальне рішення — за аналітиком; AI/автоматика лише пропонує.
   </div>
 </main>

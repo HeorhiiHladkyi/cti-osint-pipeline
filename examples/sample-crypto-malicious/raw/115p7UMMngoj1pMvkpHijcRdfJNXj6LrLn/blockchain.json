@@ -1,0 +1,35 @@
+{
+  "source": "blockchain",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "chain": "BTC",
+    "currency": "BTC",
+    "address": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+    "balance": 0.46702392,
+    "total_received": 14.87769994,
+    "total_sent": 14.41067602,
+    "tx_count": 124,
+    "first_seen": "2017-08-03",
+    "last_seen": "2020-11-14",
+    "sample_tx": [
+      "14449446275da0bf11825d14733fcc28f7264f8a2c3a506752f92fddb8e1aa16",
+      "4f9c82c08d85f294a47b1b966fa9107dc690ffc5b314a7379097bfdd9483d3ce",
+      "5042e1347182ce055d85c9160b396125d434c6e540ce3c5e5a71b06a91fb4529",
+      "c3350dc0e1023532b294edd77b9b4d70c61133358d0dd47be6d15a44491f8053",
+      "05d3bf37e13ccd972102157ebee82900d359378e188f3c4a7d6b80073f28b555"
+    ],
+    "counterparties": [
+      "3AzJ9wbhhDsfCvWGU74uWFSQ2E8hWaTq5C",
+      "17h5923U88esSwtmJa4v1EgVW9vi1dJX1q",
+      "14rkdHrh1E3L34v9vTevoJ5hGfLmM2eLTX",
+      "3AbbeCpuxNk1Ceq16tM1Np6fUXJjAqdFMk",
+      "38WhkvtJUeMtoqAb7SJKtjWYGf8YvT4hLC",
+      "39ZYSJLoCAKCDyavynjzXG7VSTeqmh3AXW",
+      "3KVvsQNKaTvTE7gGuWpVZfVEPYt5Kn5QvK",
+      "32W8QfNgcK32hBRTm6QAgQP7A7j9817JZY"
+    ]
+  },
+  "fetched_at": "2026-06-22T13:55:23.650888+00:00"
+}

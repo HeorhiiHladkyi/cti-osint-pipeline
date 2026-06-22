@@ -1,14 +1,14 @@
 {
   "type": "bundle",
-  "id": "bundle--41779cbc-cb36-4ee3-89b8-fef1935bf423",
+  "id": "bundle--672c30be-9997-462d-b8fe-a9e894212208",
   "spec_version": "2.1",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--389abc00-b8d5-4edb-b43d-83dc4c01552a",
-      "created": "2026-06-22T13:49:11.000Z",
-      "modified": "2026-06-22T13:49:11.000Z",
+      "id": "indicator--a279b481-56b4-4347-a6f3-cafea7345092",
+      "created": "2026-06-22T13:56:29.000Z",
+      "modified": "2026-06-22T13:56:29.000Z",
       "name": "btc: 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
       "description": "Гаманець BTC: баланс 107.22355824 BTC; транзакцій 63254; остання активність 2026-06-22",
       "indicator_types": [
@@ -16,7 +16,7 @@
       ],
       "pattern": "[cryptocurrency-wallet:value = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:49:11.000Z",
+      "valid_from": "2026-06-22T13:56:29.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -27,9 +27,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c322ac20-8478-4779-abc6-8af4ac5f6f2b",
-      "created": "2026-06-22T13:49:11.000Z",
-      "modified": "2026-06-22T13:49:11.000Z",
+      "id": "indicator--8ea936a1-b26d-48a8-beaf-c469598f7f93",
+      "created": "2026-06-22T13:56:29.000Z",
+      "modified": "2026-06-22T13:56:29.000Z",
       "name": "eth: 0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
       "description": "Гаманець ETH: баланс 2.72137622 ETH; транзакцій 1414; остання активність 2026-05-22",
       "indicator_types": [
@@ -37,7 +37,7 @@
       ],
       "pattern": "[cryptocurrency-wallet:value = '0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:49:11.000Z",
+      "valid_from": "2026-06-22T13:56:29.000Z",
       "confidence": 20,
       "labels": [
         "benign"

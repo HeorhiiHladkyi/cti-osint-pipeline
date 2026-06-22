@@ -1,0 +1,53 @@
+{
+  "type": "bundle",
+  "id": "bundle--6a8e2c76-e706-4e03-8f35-89a9737037ea",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--207622ac-47b1-435e-bcc9-7b1a37793b75",
+      "created": "2026-06-22T13:55:26.000Z",
+      "modified": "2026-06-22T13:55:26.000Z",
+      "name": "btc: 115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "description": "Гаманець BTC: баланс 0.46702392 BTC; транзакцій 124; остання активність 2020-11-14; Репутація гаманця: WannaCry ransom wallet [ransomware] — джерело: WannaCry IR reports (2017), widely documented",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[cryptocurrency-wallet:value = '115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T13:55:26.000Z",
+      "confidence": 90,
+      "labels": [
+        "malicious-activity"
+      ],
+      "x_threat_level": "critical",
+      "x_mitre_attack": [
+        "T1657"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c50a3453-8b49-47cb-bb05-26e4f9d93b4c",
+      "created": "2026-06-22T13:55:26.000Z",
+      "modified": "2026-06-22T13:55:26.000Z",
+      "name": "eth: 0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "description": "Гаманець ETH: баланс 0.00764436 ETH; транзакцій 591; остання активність 2026-04-13; Репутація гаманця: Tornado Cash — Donation (OFAC SDN) [sanctions] — джерело: US Treasury OFAC SDN list, 2022-08-08",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[cryptocurrency-wallet:value = '0x8589427373D6D84E98730D7795D8f6f8731FDA16']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T13:55:26.000Z",
+      "confidence": 90,
+      "labels": [
+        "malicious-activity"
+      ],
+      "x_threat_level": "critical",
+      "x_mitre_attack": [
+        "T1657"
+      ]
+    }
+  ]
+}

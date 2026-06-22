@@ -1,0 +1,112 @@
+[
+  {
+    "indicator": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+    "type": "btc",
+    "threat_level": "critical",
+    "score": 70,
+    "confidence": "medium",
+    "resolved_ip": null,
+    "asn": null,
+    "network_country": null,
+    "cdn": null,
+    "origin_candidates": [],
+    "crypto": {
+      "chain": "BTC",
+      "currency": "BTC",
+      "address": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "balance": 0.46702392,
+      "total_received": 14.87769994,
+      "total_sent": 14.41067602,
+      "tx_count": 124,
+      "first_seen": "2017-08-03",
+      "last_seen": "2020-11-14",
+      "sample_tx": [
+        "14449446275da0bf11825d14733fcc28f7264f8a2c3a506752f92fddb8e1aa16",
+        "4f9c82c08d85f294a47b1b966fa9107dc690ffc5b314a7379097bfdd9483d3ce",
+        "5042e1347182ce055d85c9160b396125d434c6e540ce3c5e5a71b06a91fb4529",
+        "c3350dc0e1023532b294edd77b9b4d70c61133358d0dd47be6d15a44491f8053",
+        "05d3bf37e13ccd972102157ebee82900d359378e188f3c4a7d6b80073f28b555"
+      ],
+      "counterparties": [
+        "3AzJ9wbhhDsfCvWGU74uWFSQ2E8hWaTq5C",
+        "17h5923U88esSwtmJa4v1EgVW9vi1dJX1q",
+        "14rkdHrh1E3L34v9vTevoJ5hGfLmM2eLTX",
+        "3AbbeCpuxNk1Ceq16tM1Np6fUXJjAqdFMk",
+        "38WhkvtJUeMtoqAb7SJKtjWYGf8YvT4hLC",
+        "39ZYSJLoCAKCDyavynjzXG7VSTeqmh3AXW",
+        "3KVvsQNKaTvTE7gGuWpVZfVEPYt5Kn5QvK",
+        "32W8QfNgcK32hBRTm6QAgQP7A7j9817JZY"
+      ]
+    },
+    "mitre_attack": [
+      {
+        "id": "T1657",
+        "name": "Financial Theft"
+      }
+    ],
+    "reasons": [
+      "Гаманець BTC: баланс 0.46702392 BTC; транзакцій 124; остання активність 2020-11-14",
+      "Репутація гаманця: WannaCry ransom wallet [ransomware] — джерело: WannaCry IR reports (2017), widely documented"
+    ],
+    "recommendations": [
+      "ЗАБЛОКУВАТИ на периметрі (firewall / proxy / EDR).",
+      "Ескалювати до групи реагування на інциденти.",
+      "Провести пошук індикатора в логах (останні 90 днів)."
+    ]
+  },
+  {
+    "indicator": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+    "type": "eth",
+    "threat_level": "critical",
+    "score": 80,
+    "confidence": "medium",
+    "resolved_ip": null,
+    "asn": null,
+    "network_country": null,
+    "cdn": null,
+    "origin_candidates": [],
+    "crypto": {
+      "chain": "ETH",
+      "currency": "ETH",
+      "address": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "balance": 0.00764436,
+      "total_received": null,
+      "total_sent": null,
+      "tx_count": 591,
+      "first_seen": null,
+      "last_seen": "2026-04-13",
+      "sample_tx": [
+        "0x3cf643a997a2cb89aa4af2cb068c1a7c528778b30f8708350539aadc865dd8a1",
+        "0x59a4210d73661ef73a6f8791f635719112d656a3014a71149a3a9ea150244c50",
+        "0xd267d23292cfae120946b0bd463b0a169a11df810b4da604270add70bb3dc76a",
+        "0xcf76f7c35a6b949084de7d9472ec5f8fd478b31f9e2ccc80de8c4284b915331b",
+        "0x69b40e1c4639adefd26d826f2444403b07dd6ce06225217c1fdaf9ef43f2cc59"
+      ],
+      "counterparties": [
+        "0xd86F4f7DBd63f350c884b23c0e5c3Df70082524C",
+        "0x4D723A2D19bfF1e08b3D60347A9CD48970E9DbAb",
+        "0xbdd68CcC0A295d95845Eea0e9EEa15B5E8cdDa0A",
+        "0x6a56AeBE538C8A6b502bCF20e8b63Ae418452833",
+        "0x6627C488E5Cd393e20B1C43D267e5A91236d7db2",
+        "0x1dfF7cD0E7FF958c3517da1747e7C556e1aE6A37",
+        "0x38D6E3e06c5D3c018ACbbF2482D63Dc376bEBDee",
+        "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+      ]
+    },
+    "mitre_attack": [
+      {
+        "id": "T1657",
+        "name": "Financial Theft"
+      }
+    ],
+    "reasons": [
+      "Гаманець ETH: баланс 0.00764436 ETH; транзакцій 591; остання активність 2026-04-13",
+      "Репутація гаманця: Tornado Cash — Donation (OFAC SDN) [sanctions] — джерело: US Treasury OFAC SDN list, 2022-08-08"
+    ],
+    "recommendations": [
+      "ЗАБЛОКУВАТИ на периметрі (firewall / proxy / EDR).",
+      "Ескалювати до групи реагування на інциденти.",
+      "Провести пошук індикатора в логах (останні 90 днів)."
+    ]
+  }
+]

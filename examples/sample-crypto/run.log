@@ -1,7 +1,7 @@
-2026-06-22 16:49:08 | INFO     | Keys present: {'virustotal': False, 'abuseipdb': False, 'shodan': False, 'otx': False, 'urlscan': True}
-2026-06-22 16:49:11 | INFO     | SQLite evidence DB written: evidence.sqlite
-2026-06-22 16:49:11 | INFO     | Interactive graph: graph.html
-2026-06-22 16:49:11 | INFO     | HTML report: output\2026-06-22_16-49-08\report.html
-2026-06-22 16:49:11 | WARNING  | weasyprint not installed — skipping PDF (HTML report is the primary output).
-2026-06-22 16:49:12 | INFO     | Evidence archive: output\2026-06-22_16-49-08.zip
-2026-06-22 16:49:12 | INFO     | Done. Overall threat level: LOW
+2026-06-22 16:56:25 | INFO     | Keys present: {'virustotal': False, 'abuseipdb': False, 'shodan': False, 'otx': False, 'urlscan': True, 'wallet_rep': True}
+2026-06-22 16:56:29 | INFO     | SQLite evidence DB written: evidence.sqlite
+2026-06-22 16:56:30 | INFO     | Interactive graph: graph.html
+2026-06-22 16:56:30 | INFO     | HTML report: output\2026-06-22_16-56-25\report.html
+2026-06-22 16:56:30 | WARNING  | weasyprint not installed — skipping PDF (HTML report is the primary output).
+2026-06-22 16:56:30 | INFO     | Evidence archive: output\2026-06-22_16-56-25.zip
+2026-06-22 16:56:30 | INFO     | Done. Overall threat level: LOW

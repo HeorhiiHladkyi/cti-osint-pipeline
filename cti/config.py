@@ -14,6 +14,7 @@ class Settings:
     shodan_key: str = field(default_factory=lambda: os.getenv("SHODAN_API_KEY", ""))
     otx_key: str = field(default_factory=lambda: os.getenv("OTX_API_KEY", ""))
     urlscan_key: str = field(default_factory=lambda: os.getenv("URLSCAN_API_KEY", ""))
+    chainabuse_key: str = field(default_factory=lambda: os.getenv("CHAINABUSE_API_KEY", ""))
     http_timeout: int = field(default_factory=lambda: int(os.getenv("HTTP_TIMEOUT", "15")))
     user_agent: str = "cti-osint-pipeline/1.0 (+coursework)"
 
@@ -24,6 +25,7 @@ class Settings:
             "shodan": bool(self.shodan_key),
             "otx": bool(self.otx_key),
             "urlscan": True,  # public search works without a key
+            "wallet_rep": True,  # bundled known-bad list works keyless; Chainabuse if keyed
         }
 
 

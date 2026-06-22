@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "kind": "ioc",
+      "level": "critical"
+    },
+    {
+      "id": "3AzJ9wbhhDsfCvWGU74uWFSQ2E8hWaTq5C",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "17h5923U88esSwtmJa4v1EgVW9vi1dJX1q",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "14rkdHrh1E3L34v9vTevoJ5hGfLmM2eLTX",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "3AbbeCpuxNk1Ceq16tM1Np6fUXJjAqdFMk",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "38WhkvtJUeMtoqAb7SJKtjWYGf8YvT4hLC",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "39ZYSJLoCAKCDyavynjzXG7VSTeqmh3AXW",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "3KVvsQNKaTvTE7gGuWpVZfVEPYt5Kn5QvK",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "32W8QfNgcK32hBRTm6QAgQP7A7j9817JZY",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "kind": "ioc",
+      "level": "critical"
+    },
+    {
+      "id": "0xd86F4f7DBd63f350c884b23c0e5c3Df70082524C",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x4D723A2D19bfF1e08b3D60347A9CD48970E9DbAb",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xbdd68CcC0A295d95845Eea0e9EEa15B5E8cdDa0A",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x6a56AeBE538C8A6b502bCF20e8b63Ae418452833",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x6627C488E5Cd393e20B1C43D267e5A91236d7db2",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x1dfF7cD0E7FF958c3517da1747e7C556e1aE6A37",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x38D6E3e06c5D3c018ACbbF2482D63Dc376bEBDee",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "kind": "wallet",
+      "level": "unknown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "target": "3AzJ9wbhhDsfCvWGU74uWFSQ2E8hWaTq5C",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "target": "17h5923U88esSwtmJa4v1EgVW9vi1dJX1q",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "target": "14rkdHrh1E3L34v9vTevoJ5hGfLmM2eLTX",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "target": "3AbbeCpuxNk1Ceq16tM1Np6fUXJjAqdFMk",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "target": "38WhkvtJUeMtoqAb7SJKtjWYGf8YvT4hLC",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "target": "39ZYSJLoCAKCDyavynjzXG7VSTeqmh3AXW",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "target": "3KVvsQNKaTvTE7gGuWpVZfVEPYt5Kn5QvK",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
+      "target": "32W8QfNgcK32hBRTm6QAgQP7A7j9817JZY",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "target": "0xd86F4f7DBd63f350c884b23c0e5c3Df70082524C",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "target": "0x4D723A2D19bfF1e08b3D60347A9CD48970E9DbAb",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "target": "0xbdd68CcC0A295d95845Eea0e9EEa15B5E8cdDa0A",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "target": "0x6a56AeBE538C8A6b502bCF20e8b63Ae418452833",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "target": "0x6627C488E5Cd393e20B1C43D267e5A91236d7db2",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "target": "0x1dfF7cD0E7FF958c3517da1747e7C556e1aE6A37",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "target": "0x38D6E3e06c5D3c018ACbbF2482D63Dc376bEBDee",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
+      "target": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "rel": "tx_counterparty"
+    }
+  ]
+}

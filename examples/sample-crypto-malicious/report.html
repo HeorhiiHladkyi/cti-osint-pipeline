@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Звіт CTI — збагачення IoC</title>
+<style>
+  :root { --bg:#0f1729; --panel:#fff; --muted:#6b7280; --border:#e6e9f0; }
+  * { box-sizing: border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; margin:0; background:#f4f6fb; color:#1c2333; }
+  header { background:var(--bg); color:#fff; padding:26px 32px; }
+  header h1 { margin:0 0 6px; font-size:22px; }
+  header .meta { color:#9aa6c0; font-size:13px; }
+  main { padding:24px 32px; max-width:1100px; }
+  .panel { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px; margin-bottom:18px; }
+  table { width:100%; border-collapse:collapse; }
+  th { text-align:left; font-size:11px; text-transform:uppercase; color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--border); }
+  td { padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; font-size:14px; }
+  code { background:#f1f5f9; padding:1px 5px; border-radius:4px; }
+  .lvl { padding:2px 9px; border-radius:6px; font-weight:700; font-size:12px; text-transform:uppercase; }
+  .critical { background:#fee2e2; color:#991b1b; } .high { background:#ffedd5; color:#9a3412; }
+  .medium { background:#fef9c3; color:#854d0e; } .low { background:#dcfce7; color:#166534; }
+  .unknown { background:#f1f5f9; color:#475569; }
+  .chip { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; margin:2px 3px 2px 0; }
+  ul { margin:6px 0; padding-left:18px; }
+  .src-ok { color:#166534; } .src-skip { color:#b45309; } .src-fail { color:#b91c1c; }
+  .small { color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Звіт CTI — збагачення індикаторів (IoC)</h1>
+  <div class="meta">
+    Згенеровано 2026-06-22T13:55:26.079336+00:00 · 2 індикатор(ів) ·
+    Загальний рівень загрози: <span class="lvl critical">critical</span>
+  </div>
+</header>
+<main>
+  <div class="panel">
+    <strong>Використані джерела</strong> (наявні ключі):
+    
+      <span class="chip">virustotal: ні</span>
+    
+      <span class="chip">abuseipdb: ні</span>
+    
+      <span class="chip">shodan: ні</span>
+    
+      <span class="chip">otx: ні</span>
+    
+      <span class="chip">urlscan: так</span>
+    
+      <span class="chip">wallet_rep: так</span>
+    
+    <div class="small" style="margin-top:8px">Безключові джерела (DNS, WHOIS, crt.sh, RDAP, URLScan) працюють завжди; джерела з ключем пропускаються за відсутності ключа.</div>
+  </div>
+
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn</code></strong>
+          <span class="chip">btc</span>
+        </td>
+        <td class="small">Бал 70/100 · впевненість medium</td>
+        <td style="text-align:right"><span class="lvl critical">critical</span></td>
+      </tr>
+    </table>
+
+    
+
+    
+    <p class="small"><strong>Криптогаманець (BTC):</strong>
+      баланс <code>0.46702392 BTC</code> ·
+      транзакцій 124
+       · отримано 14.87769994 BTC
+       · перша активність 2017-08-03
+       · остання 2020-11-14
+      <br>контрагенти:
+        <span class="chip">3AzJ9wbhhDsf…</span><span class="chip">17h5923U88es…</span><span class="chip">14rkdHrh1E3L…</span><span class="chip">3AbbeCpuxNk1…</span><span class="chip">38WhkvtJUeMt…</span><span class="chip">39ZYSJLoCAKC…</span>
+    </p>
+    
+
+    
+
+    <p><strong>Оцінка</strong></p>
+    <ul><li>Гаманець BTC: баланс 0.46702392 BTC; транзакцій 124; остання активність 2020-11-14</li><li>Репутація гаманця: WannaCry ransom wallet [ransomware] — джерело: WannaCry IR reports (2017), widely documented</li></ul>
+
+    
+    <p><strong>MITRE ATT&CK</strong>:
+      <span class="chip">T1657 Financial Theft</span>
+    </p>
+    
+
+    <p><strong>Рекомендовані дії</strong></p>
+    <ul><li>ЗАБЛОКУВАТИ на периметрі (firewall / proxy / EDR).</li><li>Ескалювати до групи реагування на інциденти.</li><li>Провести пошук індикатора в логах (останні 90 днів).</li></ul>
+
+    <p><strong>Джерела</strong></p>
+    <table>
+      <thead><tr><th>Джерело</th><th>Статус</th><th>Ключові факти</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>blockchain</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"address": "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn", "balance": 0.46702392, "chain": "BTC", "counterparties": ["3AzJ9wbhhDsfCvWGU74uWFSQ2E8hWaTq5C", "17h5923U88esSwtmJa4v1EgVW9vi1dJX1q", "14rkdHrh1E3L34v9vTevoJ5hGfLmM2eLTX", "3AbbeCpuxNk1Ceq16tM1Np6fUXJjAqdFMk", "38WhkvtJUeMtoqAb7SJKtjWYGf8YvT4hLC", "39ZYSJLoCAKCDyavynjzXG7VSTeqmh3AXW", "3KVvsQNKaTvTE7gGuWpVZfVEPYt5Kn5QvK", "32W8QfNgcK32hBRTm6QAgQP7A7j9817JZY"], "currency": "BTC", "first_seen": "2017-08-03", "last_seen": "2020-11-14", "sample_tx": ["14449446275da0bf11825d14733fcc28f7264f8a2c3a506752f92fddb8e1aa16", "4f9c82c08d85f294a47b1b966fa9107dc690ffc5b314a7379097bfdd9483d3ce", "5042e1347182ce055d85c9160b396125d434c6e540ce3c5e5a71b06a91fb4529", "c3350dc0e1023532b294edd77b9b4d70c61133358d0dd47be6d15a44491f8053", "05d3bf37e13ccd972102157ebee82900d359378e188f3c4a7d6b80073f28b555"], "total_received": 14.87769994, "total_sent": 14.41067602, "tx_count": 124}</code></td>
+        </tr>
+      
+        <tr>
+          <td>wallet_reputation</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"category": "ransomware", "label": "WannaCry ransom wallet", "listed": true, "source": "WannaCry IR reports (2017), widely documented"}</code></td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+    <p class="small">Зв'язки (pivot): <span class="chip">tx_counterparty → 3AzJ9wbhhDsfCvWGU74uWFSQ2E8hWaTq5C</span><span class="chip">tx_counterparty → 17h5923U88esSwtmJa4v1EgVW9vi1dJX1q</span><span class="chip">tx_counterparty → 14rkdHrh1E3L34v9vTevoJ5hGfLmM2eLTX</span><span class="chip">tx_counterparty → 3AbbeCpuxNk1Ceq16tM1Np6fUXJjAqdFMk</span><span class="chip">tx_counterparty → 38WhkvtJUeMtoqAb7SJKtjWYGf8YvT4hLC</span><span class="chip">tx_counterparty → 39ZYSJLoCAKCDyavynjzXG7VSTeqmh3AXW</span><span class="chip">tx_counterparty → 3KVvsQNKaTvTE7gGuWpVZfVEPYt5Kn5QvK</span><span class="chip">tx_counterparty → 32W8QfNgcK32hBRTm6QAgQP7A7j9817JZY</span></p>
+    
+  </div>
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>0x8589427373D6D84E98730D7795D8f6f8731FDA16</code></strong>
+          <span class="chip">eth</span>
+        </td>
+        <td class="small">Бал 80/100 · впевненість medium</td>
+        <td style="text-align:right"><span class="lvl critical">critical</span></td>
+      </tr>
+    </table>
+
+    
+
+    
+    <p class="small"><strong>Криптогаманець (ETH):</strong>
+      баланс <code>0.00764436 ETH</code> ·
+      транзакцій 591
+      
+      
+       · остання 2026-04-13
+      <br>контрагенти:
+        <span class="chip">0xd86F4f7DBd…</span><span class="chip">0x4D723A2D19…</span><span class="chip">0xbdd68CcC0A…</span><span class="chip">0x6a56AeBE53…</span><span class="chip">0x6627C488E5…</span><span class="chip">0x1dfF7cD0E7…</span>
+    </p>
+    
+
+    
+
+    <p><strong>Оцінка</strong></p>
+    <ul><li>Гаманець ETH: баланс 0.00764436 ETH; транзакцій 591; остання активність 2026-04-13</li><li>Репутація гаманця: Tornado Cash — Donation (OFAC SDN) [sanctions] — джерело: US Treasury OFAC SDN list, 2022-08-08</li></ul>
+
+    
+    <p><strong>MITRE ATT&CK</strong>:
+      <span class="chip">T1657 Financial Theft</span>
+    </p>
+    
+
+    <p><strong>Рекомендовані дії</strong></p>
+    <ul><li>ЗАБЛОКУВАТИ на периметрі (firewall / proxy / EDR).</li><li>Ескалювати до групи реагування на інциденти.</li><li>Провести пошук індикатора в логах (останні 90 днів).</li></ul>
+
+    <p><strong>Джерела</strong></p>
+    <table>
+      <thead><tr><th>Джерело</th><th>Статус</th><th>Ключові факти</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>blockchain</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"address": "0x8589427373D6D84E98730D7795D8f6f8731FDA16", "balance": 0.00764436, "chain": "ETH", "counterparties": ["0xd86F4f7DBd63f350c884b23c0e5c3Df70082524C", "0x4D723A2D19bfF1e08b3D60347A9CD48970E9DbAb", "0xbdd68CcC0A295d95845Eea0e9EEa15B5E8cdDa0A", "0x6a56AeBE538C8A6b502bCF20e8b63Ae418452833", "0x6627C488E5Cd393e20B1C43D267e5A91236d7db2", "0x1dfF7cD0E7FF958c3517da1747e7C556e1aE6A37", "0x38D6E3e06c5D3c018ACbbF2482D63Dc376bEBDee", "0xdAC17F958D2ee523a2206206994597C13D831ec7"], "currency": "ETH", "first_seen": null, "last_seen": "2026-04-13", "sample_tx": ["0x3cf643a997a2cb89aa4af2cb068c1a7c528778b30f8708350539aadc865dd8a1", "0x59a4210d73661ef73a6f8791f635719112d656a3014a71149a3a9ea150244c50", "0xd267d23292cfae120946b0bd463b0a169a11df810b4da604270add70bb3dc76a", "0xcf76f7c35a6b949084de7d9472ec5f8fd478b31f9e2ccc80de8c4284b915331b", "0x69b40e1c4639adefd26d826f2444403b07dd6ce06225217c1fdaf9ef43f2cc59"], "total_received": null, "total_sent": null, "tx_count": 591}</code></td>
+        </tr>
+      
+        <tr>
+          <td>wallet_reputation</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"category": "sanctions", "label": "Tornado Cash \u2014 Donation (OFAC SDN)", "listed": true, "source": "US Treasury OFAC SDN list, 2022-08-08"}</code></td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+    <p class="small">Зв'язки (pivot): <span class="chip">tx_counterparty → 0xd86F4f7DBd63f350c884b23c0e5c3Df70082524C</span><span class="chip">tx_counterparty → 0x4D723A2D19bfF1e08b3D60347A9CD48970E9DbAb</span><span class="chip">tx_counterparty → 0xbdd68CcC0A295d95845Eea0e9EEa15B5E8cdDa0A</span><span class="chip">tx_counterparty → 0x6a56AeBE538C8A6b502bCF20e8b63Ae418452833</span><span class="chip">tx_counterparty → 0x6627C488E5Cd393e20B1C43D267e5A91236d7db2</span><span class="chip">tx_counterparty → 0x1dfF7cD0E7FF958c3517da1747e7C556e1aE6A37</span><span class="chip">tx_counterparty → 0x38D6E3e06c5D3c018ACbbF2482D63Dc376bEBDee</span><span class="chip">tx_counterparty → 0xdAC17F958D2ee523a2206206994597C13D831ec7</span></p>
+    
+  </div>
+  
+
+  <div class="panel small">
+    Артефакти: <code>output\2026-06-22_16-55-22</code> — raw/ (JSON по кожному джерелу), evidence.sqlite, graph.html,
+    stix_bundle.json, iocs.json. Фінальне рішення — за аналітиком; AI/автоматика лише пропонує.
+  </div>
+</main>
+</body>
+</html>
