@@ -2,7 +2,7 @@
   "source": "crtsh",
   "ok": false,
   "skipped": false,
-  "reason": "HTTPSConnectionPool(host='crt.sh', port=443): Read timed out. (read timeout=15)",
+  "reason": "HTTP 404",
   "data": {},
-  "fetched_at": "2026-06-22T12:32:05.090049+00:00"
+  "fetched_at": "2026-06-22T13:16:26.850465+00:00"
 }

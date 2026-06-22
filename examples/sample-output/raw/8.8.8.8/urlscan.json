@@ -1,8 +1,62 @@
 {
   "source": "urlscan",
-  "ok": false,
+  "ok": true,
   "skipped": false,
-  "reason": "HTTP 400",
-  "data": {},
-  "fetched_at": "2026-06-22T12:31:20.493364+00:00"
+  "reason": null,
+  "data": {
+    "total": 5716,
+    "results": [
+      {
+        "url": "https://dns.google/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/c/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/c/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      },
+      {
+        "url": "https://dns.google/",
+        "ip": "8.8.8.8",
+        "server": "scaffolding on HTTPServer2"
+      }
+    ]
+  },
+  "fetched_at": "2026-06-22T13:15:29.135379+00:00"
 }
