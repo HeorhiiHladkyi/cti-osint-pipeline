@@ -1,0 +1,34 @@
+{
+  "source": "blockchain",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "chain": "ETH",
+    "currency": "ETH",
+    "address": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+    "balance": 2.72137622,
+    "total_received": null,
+    "total_sent": null,
+    "tx_count": 1414,
+    "first_seen": null,
+    "last_seen": "2026-05-22",
+    "sample_tx": [
+      "0xdea65dc1f7f50d8a058c91762afaaf6e278d6904d24848bfccc8ee970da3d7ac",
+      "0x53d513d83a78de5e580115d288f97398825e3e25ed127959f3bfaae9f1f22040",
+      "0xefd423603be9e97d19652d867bf188b97a11ac80170f0b09bb64360e88355b31",
+      "0xb90f4dbcd9533127a66f943248bc2abe513e2ab115369a5a5686785e05359c6a",
+      "0x6f638f9e43ddc03d920e4aa40001592cdd6a7d16337fce41baf1d7fb9542d817"
+    ],
+    "counterparties": [
+      "0x2CfF890f0378a11913B6129B2E97417a2c302680",
+      "0xE4D016a59D26c0448Afb6518E26004d284249fB8",
+      "0x89E4B0A2cE9d26f303CD2Bed46bd9F6598a006a3",
+      "0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb",
+      "0x154004ddcBf5A7e0dE25436B8D9e2e0b3C129cC5",
+      "0xac20D403389BDf611b87e11a7A278AC1A9E25760",
+      "0x90AdB27C2177fC6eD52971Bd829155D21c8B0d16"
+    ]
+  },
+  "fetched_at": "2026-06-22T13:49:11.328829+00:00"
+}

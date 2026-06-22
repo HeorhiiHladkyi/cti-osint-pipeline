@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from typing import Any, Literal
 from pydantic import BaseModel, Field
 
-IoCType = Literal["ipv4", "domain", "url", "md5", "sha256", "email", "unknown"]
+IoCType = Literal["ipv4", "domain", "url", "md5", "sha256", "email", "btc", "eth", "unknown"]
 ThreatLevel = Literal["critical", "high", "medium", "low", "unknown"]
 
 
@@ -36,6 +36,7 @@ class IoCResult(BaseModel):
     network_country: str | None = None
     cdn: str | None = None  # CDN provider name if the IP is a CDN edge (origin hidden)
     origin_candidates: list[dict] = Field(default_factory=list)  # probable origin IPs behind a CDN
+    crypto: dict | None = None  # on-chain enrichment for btc/eth wallets (balance, tx count, …)
 
 
 class Report(BaseModel):

@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "kind": "ioc",
+      "level": "low"
+    },
+    {
+      "id": "bc1penvmz9ty9u677hz8375lq7zphextkuqrdfm7ph9ms0hg2p7ue99qywqd86",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "bc1pz3y4pzem68avexjxa9jksfk4k9h9ve2pekwzse2fju6zl9ptx9wqrg09zx",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "bc1p3ug2fmjeek3f7klpcqw3z205cxddqqq36mdk7vj2uzcu3lfey3kqpctnwa",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "bc1pldy7mrej5y2gzgyf5fdswwfl2jgeyc9elgerelq0hh32dnte99hsp5svt3",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "bc1p4gctjq7ana5wj4t7jtxk4y3cmxhjgngg5q5uj45ky5wc9t77nl8sv5fdh7",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "bc1puu6j7lavkal3mdm800f0xr6mw7xalnlfg2cgu09gnvl976tpv5gqqt8p4d",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "bc1prz92sgn5evnfnhjq943su6w2c62w994cakapemetvjl3lkqraqks8r43fz",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "bc1pl5hwez6f95sh5j692g7ks2lny3kfgmnq5wuja6lgw2z4p8p7nf5s4vcgjt",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+      "kind": "ioc",
+      "level": "low"
+    },
+    {
+      "id": "0x2CfF890f0378a11913B6129B2E97417a2c302680",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xE4D016a59D26c0448Afb6518E26004d284249fB8",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x89E4B0A2cE9d26f303CD2Bed46bd9F6598a006a3",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x154004ddcBf5A7e0dE25436B8D9e2e0b3C129cC5",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xac20D403389BDf611b87e11a7A278AC1A9E25760",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x90AdB27C2177fC6eD52971Bd829155D21c8B0d16",
+      "kind": "wallet",
+      "level": "unknown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "target": "bc1penvmz9ty9u677hz8375lq7zphextkuqrdfm7ph9ms0hg2p7ue99qywqd86",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "target": "bc1pz3y4pzem68avexjxa9jksfk4k9h9ve2pekwzse2fju6zl9ptx9wqrg09zx",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "target": "bc1p3ug2fmjeek3f7klpcqw3z205cxddqqq36mdk7vj2uzcu3lfey3kqpctnwa",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "target": "bc1pldy7mrej5y2gzgyf5fdswwfl2jgeyc9elgerelq0hh32dnte99hsp5svt3",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "target": "bc1p4gctjq7ana5wj4t7jtxk4y3cmxhjgngg5q5uj45ky5wc9t77nl8sv5fdh7",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "target": "bc1puu6j7lavkal3mdm800f0xr6mw7xalnlfg2cgu09gnvl976tpv5gqqt8p4d",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "target": "bc1prz92sgn5evnfnhjq943su6w2c62w994cakapemetvjl3lkqraqks8r43fz",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+      "target": "bc1pl5hwez6f95sh5j692g7ks2lny3kfgmnq5wuja6lgw2z4p8p7nf5s4vcgjt",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+      "target": "0x2CfF890f0378a11913B6129B2E97417a2c302680",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+      "target": "0xE4D016a59D26c0448Afb6518E26004d284249fB8",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+      "target": "0x89E4B0A2cE9d26f303CD2Bed46bd9F6598a006a3",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+      "target": "0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+      "target": "0x154004ddcBf5A7e0dE25436B8D9e2e0b3C129cC5",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+      "target": "0xac20D403389BDf611b87e11a7A278AC1A9E25760",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359",
+      "target": "0x90AdB27C2177fC6eD52971Bd829155D21c8B0d16",
+      "rel": "tx_counterparty"
+    }
+  ]
+}

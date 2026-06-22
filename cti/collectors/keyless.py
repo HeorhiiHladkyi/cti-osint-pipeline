@@ -185,6 +185,92 @@ def network(indicator: str, ioc_type: str) -> SourceResult:
     })
 
 
+def _iso(ts) -> str | None:
+    """Unix seconds -> ISO date string."""
+    try:
+        from datetime import datetime, timezone
+        return datetime.fromtimestamp(int(ts), timezone.utc).strftime("%Y-%m-%d")
+    except Exception:
+        return None
+
+
+def _blockchain_btc(addr: str) -> SourceResult:
+    # blockchain.info is keyless and generous; satoshi values -> BTC.
+    ok_, data, err = http_get(f"https://blockchain.info/rawaddr/{addr}",
+                              params={"limit": 12}, retries=1, backoff=2.0, timeout=20)
+    if not ok_ or not isinstance(data, dict):
+        return fail("blockchain", err or "no data")
+    txs = data.get("txs", []) or []
+    times = sorted(t.get("time") for t in txs if t.get("time"))
+    counterparties: list[str] = []
+    for t in txs:
+        for o in t.get("out", []):
+            a = o.get("addr")
+            if a and a != addr and a not in counterparties:
+                counterparties.append(a)
+    return ok("blockchain", {
+        "chain": "BTC", "currency": "BTC", "address": addr,
+        "balance": round((data.get("final_balance", 0) or 0) / 1e8, 8),
+        "total_received": round((data.get("total_received", 0) or 0) / 1e8, 8),
+        "total_sent": round((data.get("total_sent", 0) or 0) / 1e8, 8),
+        "tx_count": data.get("n_tx", 0),
+        "first_seen": _iso(times[0]) if times else None,
+        "last_seen": _iso(times[-1]) if times else None,
+        "sample_tx": [t.get("hash") for t in txs[:5] if t.get("hash")],
+        "counterparties": counterparties[:8],
+    })
+
+
+def _blockchain_eth(addr: str) -> SourceResult:
+    # Blockscout public instance — fully open, no key, reliable. wei -> ETH.
+    base = "https://eth.blockscout.com/api/v2/addresses"
+    ok_, data, err = http_get(f"{base}/{addr}", retries=1, backoff=2.0, timeout=20)
+    if not ok_ or not isinstance(data, dict):
+        return fail("blockchain", err or "no data")
+    def to_eth(wei):
+        try:
+            return round(int(wei) / 1e18, 8)
+        except Exception:
+            return None
+    tx_count = 0
+    last_seen = None
+    counterparties: list[str] = []
+    ok2, cnt, _ = http_get(f"{base}/{addr}/counters", timeout=15)
+    if ok2 and isinstance(cnt, dict):
+        try:
+            tx_count = int(cnt.get("transactions_count", 0) or 0)
+        except Exception:
+            tx_count = 0
+    ok3, txs, _ = http_get(f"{base}/{addr}/transactions", timeout=15)
+    items = txs.get("items", []) if (ok3 and isinstance(txs, dict)) else []
+    for t in items[:10]:
+        if not last_seen and t.get("timestamp"):
+            last_seen = str(t["timestamp"])[:10]
+        for side in ("from", "to"):
+            h = (t.get(side) or {}).get("hash")
+            if h and h.lower() != addr.lower() and h not in counterparties:
+                counterparties.append(h)
+    sample_tx = [t.get("hash") for t in items[:5] if t.get("hash")]
+    return ok("blockchain", {
+        "chain": "ETH", "currency": "ETH", "address": addr,
+        "balance": to_eth(data.get("coin_balance", 0)),
+        "total_received": None, "total_sent": None,
+        "tx_count": tx_count,
+        "first_seen": None, "last_seen": last_seen,
+        "sample_tx": sample_tx,
+        "counterparties": counterparties[:8],
+    })
+
+
+def blockchain(indicator: str, ioc_type: str) -> SourceResult:
+    """Establish on-chain activity for a crypto wallet (keyless)."""
+    if ioc_type == "btc":
+        return _blockchain_btc(indicator)
+    if ioc_type == "eth":
+        return _blockchain_eth(indicator)
+    return fail("blockchain", f"unsupported type {ioc_type}")
+
+
 def urlscan(indicator: str, ioc_type: str) -> SourceResult:
     host = host_of(indicator) if ioc_type == "url" else indicator
     q = f"page.domain:{host}" if ioc_type in ("domain", "url") else f"page.ip:{indicator}"

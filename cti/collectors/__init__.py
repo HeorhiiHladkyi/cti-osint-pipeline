@@ -12,6 +12,7 @@ REGISTRY: list[tuple[str, set[str], Callable[[str, str], SourceResult]]] = [
     ("crtsh", {"domain", "url"}, keyless.crtsh),
     ("rdap", {"ipv4", "domain", "url"}, keyless.rdap),
     ("urlscan", {"domain", "url", "ipv4"}, keyless.urlscan),
+    ("blockchain", {"btc", "eth"}, keyless.blockchain),
     ("virustotal", {"ipv4", "domain", "url", "md5", "sha256"}, keyed.virustotal),
     ("abuseipdb", {"ipv4"}, keyed.abuseipdb),
     ("shodan", {"ipv4"}, keyed.shodan),

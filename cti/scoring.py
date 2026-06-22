@@ -80,6 +80,19 @@ def score_ioc(r: IoCResult) -> IoCResult:
             r.cdn = net["cdn"]
             reasons.append(f"IP {net['ip']} належить CDN «{net['cdn']}» — реальний origin приховано")
 
+    # crypto wallet on-chain enrichment (informational; threat signal needs a paid feed)
+    chain = _data(r.sources, "blockchain")
+    if chain and chain.get("chain"):
+        r.crypto = chain
+        cur = chain.get("currency", "")
+        bits = [f"Гаманець {chain['chain']}: баланс {chain.get('balance')} {cur}",
+                f"транзакцій {chain.get('tx_count')}"]
+        if chain.get("last_seen"):
+            bits.append(f"остання активність {chain['last_seen']}")
+        reasons.append("; ".join(bits))
+        # threat verdict for a wallet requires a paid reputation feed (Arkham/Chainalysis);
+        # keyless on-chain data is attribution/context, not a maliciousness signal.
+
     oh = _data(r.sources, "origin_hunt")
     if oh and oh.get("candidates"):
         r.origin_candidates = oh["candidates"]

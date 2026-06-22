@@ -63,6 +63,18 @@
     </p>
     {% endif %}
 
+    {% if ioc.crypto %}
+    <p class="small"><strong>Криптогаманець ({{ ioc.crypto.chain }}):</strong>
+      баланс <code>{{ ioc.crypto.balance }} {{ ioc.crypto.currency }}</code> ·
+      транзакцій {{ ioc.crypto.tx_count }}
+      {% if ioc.crypto.total_received is not none %} · отримано {{ ioc.crypto.total_received }} {{ ioc.crypto.currency }}{% endif %}
+      {% if ioc.crypto.first_seen %} · перша активність {{ ioc.crypto.first_seen }}{% endif %}
+      {% if ioc.crypto.last_seen %} · остання {{ ioc.crypto.last_seen }}{% endif %}
+      {% if ioc.crypto.counterparties %}<br>контрагенти:
+        {% for cp in ioc.crypto.counterparties[:6] %}<span class="chip">{{ cp[:12] }}…</span>{% endfor %}{% endif %}
+    </p>
+    {% endif %}
+
     {% if ioc.origin_candidates %}
     <p class="small"><strong>Ймовірний origin (субдомени повз CDN):</strong>
       {% for c in ioc.origin_candidates %}<span class="chip">{{ c.subdomain }} → {{ c.ip }}{% if c.asn %} ({{ c.asn }}){% endif %}</span>{% endfor %}

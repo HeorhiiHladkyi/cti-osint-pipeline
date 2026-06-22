@@ -7,6 +7,7 @@ from .ioc import host_of
 TYPE_COLOR = {
     "ioc": "#ef4444", "ip": "#60a5fa", "domain": "#4ade80",
     "subdomain": "#a78bfa", "asn": "#fbbf24", "host": "#f472b6",
+    "wallet": "#22d3ee",
 }
 
 
@@ -60,6 +61,9 @@ def build_graph(results: list[IoCResult]) -> nx.Graph:
 
         for c in _data(r, "origin_hunt").get("candidates", []):
             link(c.get("ip"), "ip", "origin_candidate")
+
+        for cp in _data(r, "blockchain").get("counterparties", [])[:8]:
+            link(cp, "wallet", "tx_counterparty")
 
         r.related = edges
     return g

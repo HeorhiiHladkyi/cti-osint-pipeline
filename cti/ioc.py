@@ -8,6 +8,9 @@ _MD5 = re.compile(r"^[a-fA-F0-9]{32}$")
 _SHA256 = re.compile(r"^[a-fA-F0-9]{64}$")
 _EMAIL = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 _DOMAIN = re.compile(r"^(?=.{1,253}$)(?!-)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,}$")
+# Crypto wallets: ETH (0x + 40 hex) and BTC (legacy/P2SH base58 + bech32 segwit).
+_ETH = re.compile(r"^0x[a-fA-F0-9]{40}$")
+_BTC = re.compile(r"^(?:[13][a-km-zA-HJ-NP-Z1-9]{25,34}|bc1[a-z0-9]{20,87})$")
 
 
 def detect_type(value: str) -> str:
@@ -27,6 +30,10 @@ def detect_type(value: str) -> str:
         return "sha256"
     if _EMAIL.match(v):
         return "email"
+    if _ETH.match(v):
+        return "eth"
+    if _BTC.match(v):
+        return "btc"
     if _DOMAIN.match(v):
         return "domain"
     return "unknown"

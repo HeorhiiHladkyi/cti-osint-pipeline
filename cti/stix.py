@@ -11,6 +11,8 @@ _PATTERN = {
     "md5": lambda v: f"[file:hashes.MD5 = '{v}']",
     "sha256": lambda v: f"[file:hashes.'SHA-256' = '{v}']",
     "email": lambda v: f"[email-addr:value = '{v}']",
+    "btc": lambda v: f"[cryptocurrency-wallet:value = '{v}']",
+    "eth": lambda v: f"[cryptocurrency-wallet:value = '{v}']",
 }
 _CONF = {"critical": 90, "high": 75, "medium": 50, "low": 20, "unknown": 0}
 
@@ -65,6 +67,7 @@ def to_ioc_json(results: list[IoCResult]) -> list[dict]:
         "network_country": r.network_country,
         "cdn": r.cdn,
         "origin_candidates": r.origin_candidates,
+        "crypto": r.crypto,
         "mitre_attack": r.mitre,
         "reasons": r.reasons,
         "recommendations": r.recommendations,
