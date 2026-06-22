@@ -58,7 +58,9 @@ def whois_lookup(indicator: str, ioc_type: str) -> SourceResult:
 
 def crtsh(indicator: str, ioc_type: str) -> SourceResult:
     host = host_of(indicator) if ioc_type == "url" else indicator
-    ok_, data, err = http_get("https://crt.sh/", params={"q": host, "output": "json"})
+    # crt.sh is publicly flaky (5xx / timeouts) — retry with backoff and a longer timeout.
+    ok_, data, err = http_get("https://crt.sh/", params={"q": host, "output": "json"},
+                              retries=2, backoff=2.0, timeout=25)
     if not ok_:
         return fail("crtsh", err or "no data")
     if not isinstance(data, list):
