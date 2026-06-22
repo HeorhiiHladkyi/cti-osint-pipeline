@@ -1,22 +1,22 @@
 {
   "type": "bundle",
-  "id": "bundle--174b82ba-f780-45b4-93b4-064ab44d8bd4",
+  "id": "bundle--8ba4f232-a698-457a-b740-bdbeb5fefde6",
   "spec_version": "2.1",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fcf49914-d4e1-4da5-ac83-8fdb478ff3d8",
-      "created": "2026-06-22T12:21:41.000Z",
-      "modified": "2026-06-22T12:21:41.000Z",
+      "id": "indicator--775238d5-e0b6-43bf-9e8d-679e1f9c407c",
+      "created": "2026-06-22T12:32:07.000Z",
+      "modified": "2026-06-22T12:32:07.000Z",
       "name": "ipv4: 8.8.8.8",
-      "description": "No malicious signals from queried sources",
+      "description": "Жодних шкідливих сигналів від опитаних джерел",
       "indicator_types": [
         "benign"
       ],
       "pattern": "[ipv4-addr:value = '8.8.8.8']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T12:21:41.000Z",
+      "valid_from": "2026-06-22T12:32:07.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -27,17 +27,17 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--89918d3d-ef5b-4039-9c34-02d91849e270",
-      "created": "2026-06-22T12:21:41.000Z",
-      "modified": "2026-06-22T12:21:41.000Z",
+      "id": "indicator--78d1ba15-f5fb-499f-a2de-05a37e7626bf",
+      "created": "2026-06-22T12:32:07.000Z",
+      "modified": "2026-06-22T12:32:07.000Z",
       "name": "domain: example.com",
-      "description": "No malicious signals from queried sources",
+      "description": "Жодних шкідливих сигналів від опитаних джерел",
       "indicator_types": [
         "benign"
       ],
       "pattern": "[domain-name:value = 'example.com']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T12:21:41.000Z",
+      "valid_from": "2026-06-22T12:32:07.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -48,17 +48,17 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9574f97f-b413-423f-8053-94299b6ff966",
-      "created": "2026-06-22T12:21:41.000Z",
-      "modified": "2026-06-22T12:21:41.000Z",
+      "id": "indicator--18c1c03d-6a39-4a25-aabe-10327e7a36d2",
+      "created": "2026-06-22T12:32:07.000Z",
+      "modified": "2026-06-22T12:32:07.000Z",
       "name": "url: http://testphp.vulnweb.com/",
-      "description": "No malicious signals from queried sources",
+      "description": "Жодних шкідливих сигналів від опитаних джерел",
       "indicator_types": [
         "benign"
       ],
       "pattern": "[url:value = 'http://testphp.vulnweb.com/']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T12:21:41.000Z",
+      "valid_from": "2026-06-22T12:32:07.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -69,17 +69,17 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1e553811-01fe-4537-aa3b-4609961ecca8",
-      "created": "2026-06-22T12:21:41.000Z",
-      "modified": "2026-06-22T12:21:41.000Z",
+      "id": "indicator--7e656f97-a608-45f8-9107-fc964da24129",
+      "created": "2026-06-22T12:32:07.000Z",
+      "modified": "2026-06-22T12:32:07.000Z",
       "name": "md5: 44d88612fea8a8f36de82e1278abb02f",
-      "description": "No data returned",
+      "description": "Джерела не повернули даних",
       "indicator_types": [
         "benign"
       ],
       "pattern": "[file:hashes.MD5 = '44d88612fea8a8f36de82e1278abb02f']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T12:21:41.000Z",
+      "valid_from": "2026-06-22T12:32:07.000Z",
       "confidence": 0,
       "labels": [
         "benign"
@@ -90,17 +90,17 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--63328a6b-2459-4004-8c4a-af2a1e60a07f",
-      "created": "2026-06-22T12:21:41.000Z",
-      "modified": "2026-06-22T12:21:41.000Z",
+      "id": "indicator--a5a4261b-e305-459d-81e0-602113dcb933",
+      "created": "2026-06-22T12:32:07.000Z",
+      "modified": "2026-06-22T12:32:07.000Z",
       "name": "ipv4: 185.220.101.44",
-      "description": "No malicious signals from queried sources",
+      "description": "Жодних шкідливих сигналів від опитаних джерел",
       "indicator_types": [
         "benign"
       ],
       "pattern": "[ipv4-addr:value = '185.220.101.44']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T12:21:41.000Z",
+      "valid_from": "2026-06-22T12:32:07.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -111,17 +111,17 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a88804b7-7e71-4097-8141-b869804e5da4",
-      "created": "2026-06-22T12:21:41.000Z",
-      "modified": "2026-06-22T12:21:41.000Z",
+      "id": "indicator--569610bb-c70a-480e-a7e1-37ffd81fd628",
+      "created": "2026-06-22T12:32:07.000Z",
+      "modified": "2026-06-22T12:32:07.000Z",
       "name": "domain: phishy-login-portal.test",
-      "description": "Domain contains phishing-associated keyword; No CT-log certificates (very new or non-public host)",
+      "description": "Домен містить ключове слово, типове для фішингу",
       "indicator_types": [
         "benign"
       ],
       "pattern": "[domain-name:value = 'phishy-login-portal.test']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T12:21:41.000Z",
+      "valid_from": "2026-06-22T12:32:07.000Z",
       "confidence": 20,
       "labels": [
         "benign"

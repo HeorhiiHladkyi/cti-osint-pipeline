@@ -24,7 +24,7 @@ def score_ioc(r: IoCResult) -> IoCResult:
         mal = int(vt.get("malicious", 0) or 0)
         if mal:
             score += min(60, mal * 12)
-            reasons.append(f"VirusTotal: {mal} engines flag malicious")
+            reasons.append(f"VirusTotal: {mal} рушіїв позначили як шкідливе")
             corroborations += 1
             mitre.append({"id": "T1204", "name": "User Execution"} if r.type in ("md5", "sha256")
                          else {"id": "T1071", "name": "Application Layer Protocol"})
@@ -34,7 +34,7 @@ def score_ioc(r: IoCResult) -> IoCResult:
         conf = int(abuse.get("abuseConfidenceScore", 0) or 0)
         if conf:
             score += int(conf * 0.5)
-            reasons.append(f"AbuseIPDB confidence {conf}% ({abuse.get('totalReports', 0)} reports)")
+            reasons.append(f"AbuseIPDB: достовірність зловживань {conf}% ({abuse.get('totalReports', 0)} звітів)")
             corroborations += 1 if conf >= 25 else 0
             if conf >= 25:
                 mitre.append({"id": "T1190", "name": "Exploit Public-Facing Application"})
@@ -43,7 +43,7 @@ def score_ioc(r: IoCResult) -> IoCResult:
     if otx and otx.get("pulse_count"):
         pc = int(otx["pulse_count"])
         score += min(25, pc * 5)
-        reasons.append(f"AlienVault OTX: {pc} threat pulses")
+        reasons.append(f"AlienVault OTX: {pc} threat-пульсів (згадок у кампаніях)")
         corroborations += 1
 
     shodan = _data(r.sources, "shodan")
@@ -51,23 +51,23 @@ def score_ioc(r: IoCResult) -> IoCResult:
         vulns = shodan.get("vulns", [])
         if vulns:
             score += min(30, len(vulns) * 6)
-            reasons.append(f"Shodan: {len(vulns)} known CVEs exposed")
+            reasons.append(f"Shodan: відкрито {len(vulns)} відомих CVE")
             mitre.append({"id": "T1190", "name": "Exploit Public-Facing Application"})
         risky = [RISKY_VULN_PORTS[p] for p in shodan.get("ports", []) if p in RISKY_VULN_PORTS]
         if risky:
             score += 8
-            reasons.append(f"Exposed risky services: {', '.join(sorted(set(risky)))}")
+            reasons.append(f"Відкриті ризиковані сервіси: {', '.join(sorted(set(risky)))}")
             mitre.append({"id": "T1133", "name": "External Remote Services"})
 
     # keyless heuristics
     host = r.indicator.lower()
     if r.type in ("domain", "url") and any(k in host for k in SUSP_KEYWORDS):
         score += 10
-        reasons.append("Domain contains phishing-associated keyword")
+        reasons.append("Домен містить ключове слово, типове для фішингу")
         mitre.append({"id": "T1566", "name": "Phishing"})
     crt = _data(r.sources, "crtsh")
     if crt and crt.get("count", 0) == 0 and r.type in ("domain", "url"):
-        reasons.append("No CT-log certificates (very new or non-public host)")
+        reasons.append("Немає сертифікатів у CT-логах (дуже новий або непублічний хост)")
 
     score = max(0, min(100, score))
     has_data = any(s.ok and s.data for s in r.sources)
@@ -82,7 +82,7 @@ def score_ioc(r: IoCResult) -> IoCResult:
     r.score = score
     r.threat_level = level  # type: ignore
     r.confidence = confidence  # type: ignore
-    r.reasons = reasons or (["No malicious signals from queried sources"] if has_data else ["No data returned"])
+    r.reasons = reasons or (["Жодних шкідливих сигналів від опитаних джерел"] if has_data else ["Джерела не повернули даних"])
     # dedupe mitre
     seen = set()
     r.mitre = [m for m in mitre if not (m["id"] in seen or seen.add(m["id"]))]
@@ -92,14 +92,16 @@ def score_ioc(r: IoCResult) -> IoCResult:
 
 def _recommend(level: str, ioc_type: str) -> list[str]:
     if level in ("critical", "high"):
-        base = ["BLOCK at perimeter (firewall / proxy / EDR).", "Escalate to incident response.",
-                "Hunt for the indicator across logs (last 90 days)."]
+        base = ["ЗАБЛОКУВАТИ на периметрі (firewall / proxy / EDR).",
+                "Ескалювати до групи реагування на інциденти.",
+                "Провести пошук індикатора в логах (останні 90 днів)."]
     elif level == "medium":
-        base = ["Monitor and add to watchlist.", "Correlate with internal telemetry before blocking."]
+        base = ["Моніторити та додати до списку спостереження.",
+                "Зіставити з внутрішньою телеметрією перед блокуванням."]
     elif level == "low":
-        base = ["No action; record for context."]
+        base = ["Дій не потрібно; зафіксувати для контексту."]
     else:
-        base = ["Insufficient data — re-run with API keys configured."]
+        base = ["Недостатньо даних — повторіть запуск із налаштованими API-ключами."]
     if ioc_type in ("md5", "sha256") and level in ("critical", "high"):
-        base.append("Add hash to EDR blocklist; quarantine matching files.")
+        base.append("Додати хеш до блок-листа EDR; помістити відповідні файли в карантин.")
     return base

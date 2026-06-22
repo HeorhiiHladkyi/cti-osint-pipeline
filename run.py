@@ -28,12 +28,12 @@ def main() -> int:
     report, paths = run_pipeline(indicators, base=args.output)
 
     print("\n" + "=" * 60)
-    print(f"  Overall threat level : {report.overall.upper()}")
-    print(f"  Indicators analysed  : {len(report.results)}")
-    print(f"  HTML report          : {paths['report_html']}")
-    print(f"  Interactive graph    : {paths['graph_html']}")
-    print(f"  STIX 2.1 bundle      : {paths['stix']}")
-    print(f"  Evidence archive     : {paths['archive']}")
+    print(f"  Загальний рівень загрози : {report.overall.upper()}")
+    print(f"  Проаналізовано IoC       : {len(report.results)}")
+    print(f"  HTML-звіт                : {paths['report_html']}")
+    print(f"  Інтерактивний граф       : {paths['graph_html']}")
+    print(f"  STIX 2.1 bundle          : {paths['stix']}")
+    print(f"  Архів доказів            : {paths['archive']}")
     print("=" * 60)
     return 0
 

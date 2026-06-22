@@ -1,12 +1,8 @@
 {
   "source": "crtsh",
-  "ok": true,
+  "ok": false,
   "skipped": false,
-  "reason": null,
-  "data": {
-    "count": 0,
-    "certificates": [],
-    "subdomains": []
-  },
-  "fetched_at": "2026-06-22T12:21:40.466485+00:00"
+  "reason": "HTTPSConnectionPool(host='crt.sh', port=443): Read timed out. (read timeout=15)",
+  "data": {},
+  "fetched_at": "2026-06-22T12:32:05.090049+00:00"
 }

@@ -7,10 +7,10 @@
     "confidence": "low",
     "mitre_attack": [],
     "reasons": [
-      "No malicious signals from queried sources"
+      "Жодних шкідливих сигналів від опитаних джерел"
     ],
     "recommendations": [
-      "No action; record for context."
+      "Дій не потрібно; зафіксувати для контексту."
     ]
   },
   {
@@ -21,10 +21,10 @@
     "confidence": "low",
     "mitre_attack": [],
     "reasons": [
-      "No malicious signals from queried sources"
+      "Жодних шкідливих сигналів від опитаних джерел"
     ],
     "recommendations": [
-      "No action; record for context."
+      "Дій не потрібно; зафіксувати для контексту."
     ]
   },
   {
@@ -35,10 +35,10 @@
     "confidence": "low",
     "mitre_attack": [],
     "reasons": [
-      "No malicious signals from queried sources"
+      "Жодних шкідливих сигналів від опитаних джерел"
     ],
     "recommendations": [
-      "No action; record for context."
+      "Дій не потрібно; зафіксувати для контексту."
     ]
   },
   {
@@ -49,10 +49,10 @@
     "confidence": "low",
     "mitre_attack": [],
     "reasons": [
-      "No data returned"
+      "Джерела не повернули даних"
     ],
     "recommendations": [
-      "Insufficient data — re-run with API keys configured."
+      "Недостатньо даних — повторіть запуск із налаштованими API-ключами."
     ]
   },
   {
@@ -63,10 +63,10 @@
     "confidence": "low",
     "mitre_attack": [],
     "reasons": [
-      "No malicious signals from queried sources"
+      "Жодних шкідливих сигналів від опитаних джерел"
     ],
     "recommendations": [
-      "No action; record for context."
+      "Дій не потрібно; зафіксувати для контексту."
     ]
   },
   {
@@ -82,11 +82,10 @@
       }
     ],
     "reasons": [
-      "Domain contains phishing-associated keyword",
-      "No CT-log certificates (very new or non-public host)"
+      "Домен містить ключове слово, типове для фішингу"
     ],
     "recommendations": [
-      "No action; record for context."
+      "Дій не потрібно; зафіксувати для контексту."
     ]
   }
 ]

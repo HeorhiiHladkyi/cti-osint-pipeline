@@ -9,20 +9,20 @@
       "172.66.147.243"
     ],
     "AAAA": [
-      "2606:4700:10::6814:179a",
-      "2606:4700:10::ac42:93f3"
+      "2606:4700:10::ac42:93f3",
+      "2606:4700:10::6814:179a"
     ],
     "MX": [
       "0 ."
     ],
     "NS": [
-      "hera.ns.cloudflare.com.",
-      "elliott.ns.cloudflare.com."
+      "elliott.ns.cloudflare.com.",
+      "hera.ns.cloudflare.com."
     ],
     "TXT": [
-      "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9",
-      "v=spf1 -all"
+      "v=spf1 -all",
+      "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"
     ]
   },
-  "fetched_at": "2026-06-22T12:21:32.973265+00:00"
+  "fetched_at": "2026-06-22T12:31:20.543688+00:00"
 }

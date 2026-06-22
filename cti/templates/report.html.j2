@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>CTI IoC Enrichment Report</title>
+<title>Звіт CTI — збагачення IoC</title>
 <style>
   :root { --bg:#0f1729; --panel:#fff; --muted:#6b7280; --border:#e6e9f0; }
   * { box-sizing: border-box; }
@@ -28,19 +28,19 @@
 </head>
 <body>
 <header>
-  <h1>CTI — IoC Enrichment Report</h1>
+  <h1>Звіт CTI — збагачення індикаторів (IoC)</h1>
   <div class="meta">
-    Generated {{ r.generated_at }} · {{ r.results|length }} indicator(s) ·
-    Overall threat: <span class="lvl {{ r.overall }}">{{ r.overall }}</span>
+    Згенеровано {{ r.generated_at }} · {{ r.results|length }} індикатор(ів) ·
+    Загальний рівень загрози: <span class="lvl {{ r.overall }}">{{ r.overall }}</span>
   </div>
 </header>
 <main>
   <div class="panel">
-    <strong>Sources used</strong> (keys present):
+    <strong>Використані джерела</strong> (наявні ключі):
     {% for name, on in r.key_status.items() %}
-      <span class="chip">{{ name }}: {{ 'yes' if on else 'no' }}</span>
+      <span class="chip">{{ name }}: {{ 'так' if on else 'ні' }}</span>
     {% endfor %}
-    <div class="small" style="margin-top:8px">Keyless sources (DNS, WHOIS, crt.sh, RDAP, URLScan) always run; keyed sources are skipped without a key.</div>
+    <div class="small" style="margin-top:8px">Безключові джерела (DNS, WHOIS, crt.sh, RDAP, URLScan) працюють завжди; джерела з ключем пропускаються за відсутності ключа.</div>
   </div>
 
   {% for ioc in r.results %}
@@ -51,12 +51,12 @@
           <strong style="font-size:16px"><code>{{ ioc.indicator }}</code></strong>
           <span class="chip">{{ ioc.type }}</span>
         </td>
-        <td class="small">Score {{ ioc.score }}/100 · confidence {{ ioc.confidence }}</td>
+        <td class="small">Бал {{ ioc.score }}/100 · впевненість {{ ioc.confidence }}</td>
         <td style="text-align:right"><span class="lvl {{ ioc.threat_level }}">{{ ioc.threat_level }}</span></td>
       </tr>
     </table>
 
-    <p><strong>Assessment</strong></p>
+    <p><strong>Оцінка</strong></p>
     <ul>{% for reason in ioc.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>
 
     {% if ioc.mitre %}
@@ -65,17 +65,17 @@
     </p>
     {% endif %}
 
-    <p><strong>Recommended actions</strong></p>
+    <p><strong>Рекомендовані дії</strong></p>
     <ul>{% for rec in ioc.recommendations %}<li>{{ rec }}</li>{% endfor %}</ul>
 
-    <p><strong>Sources</strong></p>
+    <p><strong>Джерела</strong></p>
     <table>
-      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <thead><tr><th>Джерело</th><th>Статус</th><th>Ключові факти</th></tr></thead>
       <tbody>
       {% for s in ioc.sources %}
         <tr>
           <td>{{ s.source }}</td>
-          <td>{% if s.skipped %}<span class="src-skip">skipped</span>{% elif s.ok %}<span class="src-ok">ok</span>{% else %}<span class="src-fail">failed</span>{% endif %}</td>
+          <td>{% if s.skipped %}<span class="src-skip">пропущено</span>{% elif s.ok %}<span class="src-ok">ок</span>{% else %}<span class="src-fail">помилка</span>{% endif %}</td>
           <td class="small">{% if s.ok %}<code>{{ s.data|tojson }}</code>{% else %}{{ s.reason }}{% endif %}</td>
         </tr>
       {% endfor %}
@@ -83,14 +83,14 @@
     </table>
 
     {% if ioc.related %}
-    <p class="small">Pivot edges: {% for e in ioc.related %}<span class="chip">{{ e.rel }} → {{ e.target }}</span>{% endfor %}</p>
+    <p class="small">Зв'язки (pivot): {% for e in ioc.related %}<span class="chip">{{ e.rel }} → {{ e.target }}</span>{% endfor %}</p>
     {% endif %}
   </div>
   {% endfor %}
 
   <div class="panel small">
-    Artifacts: <code>{{ r.run_dir }}</code> — raw/ (per-source JSON), evidence.sqlite, graph.html,
-    stix_bundle.json, iocs.json. Analyst owns the final judgement; AI/automation only proposes.
+    Артефакти: <code>{{ r.run_dir }}</code> — raw/ (JSON по кожному джерелу), evidence.sqlite, graph.html,
+    stix_bundle.json, iocs.json. Фінальне рішення — за аналітиком; AI/автоматика лише пропонує.
   </div>
 </main>
 </body>

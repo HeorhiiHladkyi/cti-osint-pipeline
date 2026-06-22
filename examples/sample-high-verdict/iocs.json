@@ -20,16 +20,16 @@
       }
     ],
     "reasons": [
-      "VirusTotal: 11 engines flag malicious",
-      "AbuseIPDB confidence 100% (842 reports)",
-      "AlienVault OTX: 7 threat pulses",
-      "Shodan: 1 known CVEs exposed",
-      "Exposed risky services: RDP"
+      "VirusTotal: 11 рушіїв позначили як шкідливе",
+      "AbuseIPDB: достовірність зловживань 100% (842 звітів)",
+      "AlienVault OTX: 7 threat-пульсів (згадок у кампаніях)",
+      "Shodan: відкрито 1 відомих CVE",
+      "Відкриті ризиковані сервіси: RDP"
     ],
     "recommendations": [
-      "BLOCK at perimeter (firewall / proxy / EDR).",
-      "Escalate to incident response.",
-      "Hunt for the indicator across logs (last 90 days)."
+      "ЗАБЛОКУВАТИ на периметрі (firewall / proxy / EDR).",
+      "Ескалювати до групи реагування на інциденти.",
+      "Провести пошук індикатора в логах (останні 90 днів)."
     ]
   },
   {
@@ -49,13 +49,13 @@
       }
     ],
     "reasons": [
-      "VirusTotal: 4 engines flag malicious",
-      "Domain contains phishing-associated keyword"
+      "VirusTotal: 4 рушіїв позначили як шкідливе",
+      "Домен містить ключове слово, типове для фішингу"
     ],
     "recommendations": [
-      "BLOCK at perimeter (firewall / proxy / EDR).",
-      "Escalate to incident response.",
-      "Hunt for the indicator across logs (last 90 days)."
+      "ЗАБЛОКУВАТИ на периметрі (firewall / proxy / EDR).",
+      "Ескалювати до групи реагування на інциденти.",
+      "Провести пошук індикатора в логах (останні 90 днів)."
     ]
   }
 ]
