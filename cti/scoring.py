@@ -69,6 +69,17 @@ def score_ioc(r: IoCResult) -> IoCResult:
     if crt and crt.get("count", 0) == 0 and r.type in ("domain", "url"):
         reasons.append("Немає сертифікатів у CT-логах (дуже новий або непублічний хост)")
 
+    # network attribution of the established target IP (+ CDN origin-hidden flag)
+    net = _data(r.sources, "network")
+    if net and net.get("ip"):
+        r.resolved_ip = net["ip"]
+        r.network_country = net.get("country")
+        if net.get("asn"):
+            r.asn = f"{net['asn']} {net.get('as_name') or ''}".strip()
+        if net.get("is_cdn"):
+            r.cdn = net["cdn"]
+            reasons.append(f"IP {net['ip']} належить CDN «{net['cdn']}» — реальний origin приховано")
+
     score = max(0, min(100, score))
     has_data = any(s.ok and s.data for s in r.sources)
     level = (

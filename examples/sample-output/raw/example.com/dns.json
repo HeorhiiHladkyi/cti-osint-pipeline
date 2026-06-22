@@ -16,13 +16,13 @@
       "0 ."
     ],
     "NS": [
-      "elliott.ns.cloudflare.com.",
-      "hera.ns.cloudflare.com."
+      "hera.ns.cloudflare.com.",
+      "elliott.ns.cloudflare.com."
     ],
     "TXT": [
       "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9",
       "v=spf1 -all"
     ]
   },
-  "fetched_at": "2026-06-22T13:15:29.226854+00:00"
+  "fetched_at": "2026-06-22T13:32:05.523058+00:00"
 }

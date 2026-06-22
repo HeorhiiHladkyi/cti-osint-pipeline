@@ -1,0 +1,16 @@
+{
+  "source": "network",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "ip": "185.220.101.44",
+    "asn": "AS60729",
+    "as_name": "TORSERVERS-NET - Stiftung Erneuerbare Freiheit, DE",
+    "country": "DE",
+    "prefix": "185.220.101.0/24",
+    "is_cdn": false,
+    "cdn": null
+  },
+  "fetched_at": "2026-06-22T13:33:20.878961+00:00"
+}

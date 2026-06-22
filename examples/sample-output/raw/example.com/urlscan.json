@@ -8,55 +8,55 @@
     "results": [
       {
         "url": "https://example.com/",
-        "ip": "2606:4700:10::ac42:93f3",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
-        "ip": "2606:4700:10::ac42:93f3",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
-        "ip": "2606:4700:10::ac42:93f3",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
-        "ip": "2606:4700:10::ac42:93f3",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
-        "ip": "104.20.23.154",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
-        "ip": "104.20.23.154",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
-        "ip": "104.20.23.154",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
-        "ip": "104.20.23.154",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
         "ip": "172.66.147.243",
         "server": "cloudflare"
       },
       {
-        "url": "https://www.example.com/?utm_medium=email&utm_source=Eloqua&utm_campaign=20260618_ge26_2%20weeks%20ger%20free_RSD",
+        "url": "https://example.com/",
+        "ip": "2606:4700:10::ac42:93f3",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "2606:4700:10::ac42:93f3",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "2606:4700:10::ac42:93f3",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "2606:4700:10::ac42:93f3",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
         "ip": "172.66.147.243",
         "server": "cloudflare"
       }
     ]
   },
-  "fetched_at": "2026-06-22T13:15:33.809202+00:00"
+  "fetched_at": "2026-06-22T13:32:09.674320+00:00"
 }

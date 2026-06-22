@@ -1,0 +1,16 @@
+{
+  "source": "network",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "ip": "44.228.249.3",
+    "asn": "AS16509",
+    "as_name": "AMAZON-02 - Amazon.com, Inc., US",
+    "country": "US",
+    "prefix": "44.224.0.0/11",
+    "is_cdn": false,
+    "cdn": null
+  },
+  "fetched_at": "2026-06-22T13:32:10.093195+00:00"
+}

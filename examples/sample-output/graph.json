@@ -120,7 +120,7 @@
     {
       "source": "example.com",
       "target": "172.66.147.243",
-      "rel": "resolves_to"
+      "rel": "urlscan_observed"
     },
     {
       "source": "example.com",

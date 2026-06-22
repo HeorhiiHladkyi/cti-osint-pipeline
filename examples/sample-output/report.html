@@ -30,7 +30,7 @@
 <header>
   <h1>Звіт CTI — збагачення індикаторів (IoC)</h1>
   <div class="meta">
-    Згенеровано 2026-06-22T13:16:28.050711+00:00 · 6 індикатор(ів) ·
+    Згенеровано 2026-06-22T13:33:32.853025+00:00 · 6 індикатор(ів) ·
     Загальний рівень загрози: <span class="lvl low">low</span>
   </div>
 </header>
@@ -64,6 +64,13 @@
       </tr>
     </table>
 
+    
+    <p class="small"><strong>Мережа:</strong>
+      IP <code>8.8.8.8</code> · AS15169 GOOGLE - Google LLC, US · US
+      
+    </p>
+    
+
     <p><strong>Оцінка</strong></p>
     <ul><li>Жодних шкідливих сигналів від опитаних джерел</li></ul>
 
@@ -81,6 +88,12 @@
           <td>dns</td>
           <td><span class="src-ok">ок</span></td>
           <td class="small"><code>{"ptr": ["dns.google."]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>network</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"as_name": "GOOGLE - Google LLC, US", "asn": "AS15169", "cdn": null, "country": "US", "ip": "8.8.8.8", "is_cdn": false, "prefix": "8.8.8.0/24"}</code></td>
         </tr>
       
         <tr>
@@ -139,8 +152,15 @@
       </tr>
     </table>
 
+    
+    <p class="small"><strong>Мережа:</strong>
+      IP <code>172.66.147.243</code> · AS13335 CLOUDFLARENET - Cloudflare, Inc., US · US
+      <span class="lvl medium" style="margin-left:6px">CDN: Cloudflare — origin прихований</span>
+    </p>
+    
+
     <p><strong>Оцінка</strong></p>
-    <ul><li>Жодних шкідливих сигналів від опитаних джерел</li></ul>
+    <ul><li>IP 172.66.147.243 належить CDN «Cloudflare» — реальний origin приховано</li></ul>
 
     
 
@@ -155,7 +175,13 @@
         <tr>
           <td>dns</td>
           <td><span class="src-ok">ок</span></td>
-          <td class="small"><code>{"A": ["172.66.147.243", "104.20.23.154"], "AAAA": ["2606:4700:10::ac42:93f3", "2606:4700:10::6814:179a"], "MX": ["0 ."], "NS": ["elliott.ns.cloudflare.com.", "hera.ns.cloudflare.com."], "TXT": ["_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9", "v=spf1 -all"]}</code></td>
+          <td class="small"><code>{"A": ["172.66.147.243", "104.20.23.154"], "AAAA": ["2606:4700:10::ac42:93f3", "2606:4700:10::6814:179a"], "MX": ["0 ."], "NS": ["hera.ns.cloudflare.com.", "elliott.ns.cloudflare.com."], "TXT": ["_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9", "v=spf1 -all"]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>network</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"as_name": "CLOUDFLARENET - Cloudflare, Inc., US", "asn": "AS13335", "cdn": "Cloudflare", "country": "US", "ip": "172.66.147.243", "is_cdn": true, "prefix": "172.66.144.0/20"}</code></td>
         </tr>
       
         <tr>
@@ -173,13 +199,13 @@
         <tr>
           <td>rdap</td>
           <td><span class="src-ok">ок</span></td>
-          <td class="small"><code>{"asn": null, "country": null, "events": [{"registration": "1995-08-14T04:00:00Z"}, {"expiration": "2026-08-13T04:00:00Z"}, {"last changed": "2026-01-16T18:26:50Z"}, {"last update of RDAP database": "2026-06-22T13:15:15Z"}], "handle": "2336799_DOMAIN_COM-VRSN", "name": null}</code></td>
+          <td class="small"><code>{"asn": null, "country": null, "events": [{"registration": "1995-08-14T04:00:00Z"}, {"expiration": "2026-08-13T04:00:00Z"}, {"last changed": "2026-01-16T18:26:50Z"}, {"last update of RDAP database": "2026-06-22T13:32:00Z"}], "handle": "2336799_DOMAIN_COM-VRSN", "name": null}</code></td>
         </tr>
       
         <tr>
           <td>urlscan</td>
           <td><span class="src-ok">ок</span></td>
-          <td class="small"><code>{"results": [{"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "172.66.147.243", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "172.66.147.243", "server": "cloudflare", "url": "https://www.example.com/?utm_medium=email\u0026utm_source=Eloqua\u0026utm_campaign=20260618_ge26_2%20weeks%20ger%20free_RSD"}], "total": 10000}</code></td>
+          <td class="small"><code>{"results": [{"ip": "172.66.147.243", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "172.66.147.243", "server": "cloudflare", "url": "https://example.com/"}], "total": 10000}</code></td>
         </tr>
       
         <tr>
@@ -198,7 +224,7 @@
     </table>
 
     
-    <p class="small">Зв'язки (pivot): <span class="chip">resolves_to → 172.66.147.243</span><span class="chip">resolves_to → 104.20.23.154</span><span class="chip">ct_cert → *.example.com</span><span class="chip">ct_cert → AS207960 Test Intermediate - example.com</span><span class="chip">ct_cert → dev.example.com</span><span class="chip">ct_cert → m.example.com</span><span class="chip">ct_cert → m.testexample.com</span><span class="chip">ct_cert → products.example.com</span><span class="chip">ct_cert → subjectname@example.com</span><span class="chip">ct_cert → support.example.com</span><span class="chip">ct_cert → user@example.com</span><span class="chip">ct_cert → www.example.com</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 104.20.23.154</span></p>
+    <p class="small">Зв'язки (pivot): <span class="chip">resolves_to → 172.66.147.243</span><span class="chip">resolves_to → 104.20.23.154</span><span class="chip">ct_cert → *.example.com</span><span class="chip">ct_cert → AS207960 Test Intermediate - example.com</span><span class="chip">ct_cert → dev.example.com</span><span class="chip">ct_cert → m.example.com</span><span class="chip">ct_cert → m.testexample.com</span><span class="chip">ct_cert → products.example.com</span><span class="chip">ct_cert → subjectname@example.com</span><span class="chip">ct_cert → support.example.com</span><span class="chip">ct_cert → user@example.com</span><span class="chip">ct_cert → www.example.com</span><span class="chip">urlscan_observed → 172.66.147.243</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 104.20.23.154</span></p>
     
   </div>
   
@@ -214,8 +240,15 @@
       </tr>
     </table>
 
+    
+    <p class="small"><strong>Мережа:</strong>
+      IP <code>44.228.249.3</code> · AS16509 AMAZON-02 - Amazon.com, Inc., US · US
+      
+    </p>
+    
+
     <p><strong>Оцінка</strong></p>
-    <ul><li>Немає сертифікатів у CT-логах (дуже новий або непублічний хост)</li></ul>
+    <ul><li>Жодних шкідливих сигналів від опитаних джерел</li></ul>
 
     
 
@@ -234,6 +267,12 @@
         </tr>
       
         <tr>
+          <td>network</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"as_name": "AMAZON-02 - Amazon.com, Inc., US", "asn": "AS16509", "cdn": null, "country": "US", "ip": "44.228.249.3", "is_cdn": false, "prefix": "44.224.0.0/11"}</code></td>
+        </tr>
+      
+        <tr>
           <td>whois</td>
           <td><span class="src-ok">ок</span></td>
           <td class="small"><code>{"country": "MT", "creation_date": ["2010-06-14 07:50:29+00:00", "2010-06-14 05:50:29+00:00"], "expiration_date": "2027-06-14 07:50:29+00:00", "name_servers": ["NS-136.AWSDNS-17.COM", "NS-1450.AWSDNS-53.ORG", "NS-1588.AWSDNS-06.CO.UK", "NS-557.AWSDNS-05.NET"], "org": "Invicti Security Limited", "registrar": "Gandi SAS"}</code></td>
@@ -241,8 +280,8 @@
       
         <tr>
           <td>crtsh</td>
-          <td><span class="src-ok">ок</span></td>
-          <td class="small"><code>{"certificates": [], "count": 0, "subdomains": []}</code></td>
+          <td><span class="src-fail">помилка</span></td>
+          <td class="small">HTTP 404</td>
         </tr>
       
         <tr>
@@ -289,6 +328,8 @@
       </tr>
     </table>
 
+    
+
     <p><strong>Оцінка</strong></p>
     <ul><li>Джерела не повернули даних</li></ul>
 
@@ -332,6 +373,13 @@
       </tr>
     </table>
 
+    
+    <p class="small"><strong>Мережа:</strong>
+      IP <code>185.220.101.44</code> · AS60729 TORSERVERS-NET - Stiftung Erneuerbare Freiheit, DE · DE
+      
+    </p>
+    
+
     <p><strong>Оцінка</strong></p>
     <ul><li>Жодних шкідливих сигналів від опитаних джерел</li></ul>
 
@@ -349,6 +397,12 @@
           <td>dns</td>
           <td><span class="src-ok">ок</span></td>
           <td class="small"><code>{"ptr": ["tor-exit-44.for-privacy.net."]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>network</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"as_name": "TORSERVERS-NET - Stiftung Erneuerbare Freiheit, DE", "asn": "AS60729", "cdn": null, "country": "DE", "ip": "185.220.101.44", "is_cdn": false, "prefix": "185.220.101.0/24"}</code></td>
         </tr>
       
         <tr>
@@ -407,8 +461,10 @@
       </tr>
     </table>
 
+    
+
     <p><strong>Оцінка</strong></p>
-    <ul><li>Домен містить ключове слово, типове для фішингу</li></ul>
+    <ul><li>Домен містить ключове слово, типове для фішингу</li><li>Немає сертифікатів у CT-логах (дуже новий або непублічний хост)</li></ul>
 
     
     <p><strong>MITRE ATT&CK</strong>:
@@ -431,6 +487,12 @@
         </tr>
       
         <tr>
+          <td>network</td>
+          <td><span class="src-fail">помилка</span></td>
+          <td class="small">no A record: The DNS query name does not exist: phishy-login-portal.test.</td>
+        </tr>
+      
+        <tr>
           <td>whois</td>
           <td><span class="src-fail">помилка</span></td>
           <td class="small">Whois command returned no output</td>
@@ -438,8 +500,8 @@
       
         <tr>
           <td>crtsh</td>
-          <td><span class="src-fail">помилка</span></td>
-          <td class="small">HTTP 404</td>
+          <td><span class="src-ok">ок</span></td>
+          <td class="small"><code>{"certificates": [], "count": 0, "subdomains": []}</code></td>
         </tr>
       
         <tr>
@@ -450,8 +512,8 @@
       
         <tr>
           <td>urlscan</td>
-          <td><span class="src-ok">ок</span></td>
-          <td class="small"><code>{"results": [], "total": 0}</code></td>
+          <td><span class="src-fail">помилка</span></td>
+          <td class="small">HTTP 400</td>
         </tr>
       
         <tr>
@@ -474,7 +536,7 @@
   
 
   <div class="panel small">
-    Артефакти: <code>output\2026-06-22_16-15-24</code> — raw/ (JSON по кожному джерелу), evidence.sqlite, graph.html,
+    Артефакти: <code>output\2026-06-22_16-32-01</code> — raw/ (JSON по кожному джерелу), evidence.sqlite, graph.html,
     stix_bundle.json, iocs.json. Фінальне рішення — за аналітиком; AI/автоматика лише пропонує.
   </div>
 </main>

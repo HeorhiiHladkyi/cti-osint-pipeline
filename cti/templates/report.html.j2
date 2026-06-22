@@ -56,6 +56,13 @@
       </tr>
     </table>
 
+    {% if ioc.resolved_ip %}
+    <p class="small"><strong>Мережа:</strong>
+      IP <code>{{ ioc.resolved_ip }}</code>{% if ioc.asn %} · {{ ioc.asn }}{% endif %}{% if ioc.network_country %} · {{ ioc.network_country }}{% endif %}
+      {% if ioc.cdn %}<span class="lvl medium" style="margin-left:6px">CDN: {{ ioc.cdn }} — origin прихований</span>{% endif %}
+    </p>
+    {% endif %}
+
     <p><strong>Оцінка</strong></p>
     <ul>{% for reason in ioc.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>
 

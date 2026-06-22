@@ -7,6 +7,7 @@ from . import keyless, keyed
 # (name, applicable_types, fn)
 REGISTRY: list[tuple[str, set[str], Callable[[str, str], SourceResult]]] = [
     ("dns", {"domain", "url", "ipv4"}, keyless.dns_records),
+    ("network", {"ipv4", "domain", "url"}, keyless.network),
     ("whois", {"domain", "url"}, keyless.whois_lookup),
     ("crtsh", {"domain", "url"}, keyless.crtsh),
     ("rdap", {"ipv4", "domain", "url"}, keyless.rdap),

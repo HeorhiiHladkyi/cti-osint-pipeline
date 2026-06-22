@@ -102,6 +102,73 @@ def rdap(indicator: str, ioc_type: str) -> SourceResult:
     return ok("rdap", out)
 
 
+# Known CDN / reverse-proxy networks — if the target IP belongs here, it is an
+# edge node and the true origin server is hidden behind it.
+# Only true reverse-proxy CDNs that HIDE the origin. General cloud (AWS/GCP/Azure)
+# is intentionally excluded — there the IP is usually the real host, not an edge proxy.
+CDN_ASN = {
+    13335: "Cloudflare", 209242: "Cloudflare", 54113: "Fastly",
+    20940: "Akamai", 16625: "Akamai", 32787: "Akamai",
+    19551: "Incapsula/Imperva", 12989: "Incapsula", 54994: "Sucuri",
+    60068: "CDN77", 393234: "StackPath", 200325: "BunnyCDN", 22822: "Limelight",
+}
+CDN_KEYWORDS = ("cloudflare", "fastly", "akamai", "cloudfront", "incapsula", "imperva",
+                "sucuri", "stackpath", "bunny", "edgecast", "limelight", "cdn77", "keycdn")
+
+
+def _cymru_asn(ip: str):
+    """Keyless ASN lookup via Team Cymru DNS (origin.asn.cymru.com). IPv4 only."""
+    try:
+        import dns.resolver
+    except Exception:
+        return None
+    try:
+        rev = ".".join(reversed(ip.split(".")))
+        r = dns.resolver.Resolver(); r.lifetime = 6; r.timeout = 6
+        txt = str(r.resolve(f"{rev}.origin.asn.cymru.com", "TXT")[0]).strip('"')
+        # "13335 | 104.16.0.0/12 | US | arin | 2014-03-28"
+        asn, prefix, cc, *_ = [p.strip() for p in txt.split("|")]
+        as_name = None
+        try:
+            t2 = str(r.resolve(f"AS{asn.split()[0]}.asn.cymru.com", "TXT")[0]).strip('"')
+            as_name = t2.split("|")[-1].strip()
+        except Exception:
+            pass
+        return {"asn": asn.split()[0], "prefix": prefix, "country": cc, "as_name": as_name}
+    except Exception:
+        return None
+
+
+def network(indicator: str, ioc_type: str) -> SourceResult:
+    """Establish the target IP + its ASN/owner, and flag CDN (origin-hidden) edges."""
+    if ioc_type == "ipv4":
+        ip = indicator
+    elif ioc_type in ("domain", "url"):
+        try:
+            import dns.resolver
+            host = host_of(indicator) if ioc_type == "url" else indicator
+            r = dns.resolver.Resolver(); r.lifetime = 6; r.timeout = 6
+            ip = str(r.resolve(host, "A")[0])
+        except Exception as e:
+            return fail("network", f"no A record: {str(e)[:80]}")
+    else:
+        return fail("network", f"unsupported type {ioc_type}")
+
+    cymru = _cymru_asn(ip) or {}
+    asn = cymru.get("asn")
+    as_name = cymru.get("as_name") or ""
+    cdn = None
+    if asn and asn.isdigit() and int(asn) in CDN_ASN:
+        cdn = CDN_ASN[int(asn)]
+    elif any(kw in as_name.lower() for kw in CDN_KEYWORDS):
+        cdn = next(kw.capitalize() for kw in CDN_KEYWORDS if kw in as_name.lower())
+    return ok("network", {
+        "ip": ip, "asn": f"AS{asn}" if asn else None, "as_name": as_name or None,
+        "country": cymru.get("country"), "prefix": cymru.get("prefix"),
+        "is_cdn": bool(cdn), "cdn": cdn,
+    })
+
+
 def urlscan(indicator: str, ioc_type: str) -> SourceResult:
     host = host_of(indicator) if ioc_type == "url" else indicator
     q = f"page.domain:{host}" if ioc_type in ("domain", "url") else f"page.ip:{indicator}"

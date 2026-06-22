@@ -30,6 +30,11 @@ class IoCResult(BaseModel):
     reasons: list[str] = Field(default_factory=list)
     mitre: list[dict[str, str]] = Field(default_factory=list)
     recommendations: list[str] = Field(default_factory=list)
+    # network attribution of the target IP
+    resolved_ip: str | None = None
+    asn: str | None = None
+    network_country: str | None = None
+    cdn: str | None = None  # CDN provider name if the IP is a CDN edge (origin hidden)
 
 
 class Report(BaseModel):

@@ -5,6 +5,10 @@
     "threat_level": "low",
     "score": 0,
     "confidence": "low",
+    "resolved_ip": "8.8.8.8",
+    "asn": "AS15169 GOOGLE - Google LLC, US",
+    "network_country": "US",
+    "cdn": null,
     "mitre_attack": [],
     "reasons": [
       "Жодних шкідливих сигналів від опитаних джерел"
@@ -19,9 +23,13 @@
     "threat_level": "low",
     "score": 0,
     "confidence": "low",
+    "resolved_ip": "172.66.147.243",
+    "asn": "AS13335 CLOUDFLARENET - Cloudflare, Inc., US",
+    "network_country": "US",
+    "cdn": "Cloudflare",
     "mitre_attack": [],
     "reasons": [
-      "Жодних шкідливих сигналів від опитаних джерел"
+      "IP 172.66.147.243 належить CDN «Cloudflare» — реальний origin приховано"
     ],
     "recommendations": [
       "Дій не потрібно; зафіксувати для контексту."
@@ -33,9 +41,13 @@
     "threat_level": "low",
     "score": 0,
     "confidence": "low",
+    "resolved_ip": "44.228.249.3",
+    "asn": "AS16509 AMAZON-02 - Amazon.com, Inc., US",
+    "network_country": "US",
+    "cdn": null,
     "mitre_attack": [],
     "reasons": [
-      "Немає сертифікатів у CT-логах (дуже новий або непублічний хост)"
+      "Жодних шкідливих сигналів від опитаних джерел"
     ],
     "recommendations": [
       "Дій не потрібно; зафіксувати для контексту."
@@ -47,6 +59,10 @@
     "threat_level": "unknown",
     "score": 0,
     "confidence": "low",
+    "resolved_ip": null,
+    "asn": null,
+    "network_country": null,
+    "cdn": null,
     "mitre_attack": [],
     "reasons": [
       "Джерела не повернули даних"
@@ -61,6 +77,10 @@
     "threat_level": "low",
     "score": 0,
     "confidence": "low",
+    "resolved_ip": "185.220.101.44",
+    "asn": "AS60729 TORSERVERS-NET - Stiftung Erneuerbare Freiheit, DE",
+    "network_country": "DE",
+    "cdn": null,
     "mitre_attack": [],
     "reasons": [
       "Жодних шкідливих сигналів від опитаних джерел"
@@ -75,6 +95,10 @@
     "threat_level": "low",
     "score": 10,
     "confidence": "low",
+    "resolved_ip": null,
+    "asn": null,
+    "network_country": null,
+    "cdn": null,
     "mitre_attack": [
       {
         "id": "T1566",
@@ -82,7 +106,8 @@
       }
     ],
     "reasons": [
-      "Домен містить ключове слово, типове для фішингу"
+      "Домен містить ключове слово, типове для фішингу",
+      "Немає сертифікатів у CT-логах (дуже новий або непублічний хост)"
     ],
     "recommendations": [
       "Дій не потрібно; зафіксувати для контексту."
