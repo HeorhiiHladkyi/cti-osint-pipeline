@@ -1,3 +1,5 @@
-# Демо: відома шкідлива крипто-адреса (WannaCry ransom) + санкційна Tornado Cash
+# Демо: відомі шкідливі крипто-адреси (вердикт critical)
+# WannaCry ransomware + Tornado Cash (OFAC) + Lazarus Group (злом Ronin/Bybit-кейс)
 115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn
 0x8589427373D6D84E98730D7795D8f6f8731FDA16
+0x098B716B8Aaf21512996dC57EB0615e2383E2f96

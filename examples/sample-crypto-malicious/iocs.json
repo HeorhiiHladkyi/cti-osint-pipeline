@@ -108,5 +108,60 @@
       "Ескалювати до групи реагування на інциденти.",
       "Провести пошук індикатора в логах (останні 90 днів)."
     ]
+  },
+  {
+    "indicator": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+    "type": "eth",
+    "threat_level": "critical",
+    "score": 80,
+    "confidence": "medium",
+    "resolved_ip": null,
+    "asn": null,
+    "network_country": null,
+    "cdn": null,
+    "origin_candidates": [],
+    "crypto": {
+      "chain": "ETH",
+      "currency": "ETH",
+      "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "balance": 101.80247578,
+      "total_received": null,
+      "total_sent": null,
+      "tx_count": 429,
+      "first_seen": null,
+      "last_seen": "2026-04-09",
+      "sample_tx": [
+        "0x3ea22b4718f60851bdf4e54a2529bf9759775a419d7d8343f1b4381b2e151796",
+        "0x74f7fbfe5a0bd3ef2189619497d9c8445a0b8e6d5630e490534a3d2b6924ac33",
+        "0x6cbd30d24ef00f00763617f75ac1c56fc6d41320cb11326df9603cb73932aa55",
+        "0xb37bc24d865a8021425dff01cd6cc7673010cb7642cd7c73be728cea8fda0dae",
+        "0x7411f1ed289a955e91e5074c75d4af832517dc79e01a3d0530ceb7f2123cb26a"
+      ],
+      "counterparties": [
+        "0x8C75aD518Dce956b488AB65E36aB229d8664BF29",
+        "0xE546480138D50Bb841B204691C39cC514858d101",
+        "0xFc3Ff9d9Abd3ABADda68821e443779bEb1082f43",
+        "0x09564aC9288eD66bD32E793E76ce4336C1a9eD00",
+        "0xbc25D517cc9d7eA453622dEd3213302dE34d29Eb",
+        "0xdf225c04450504e9198569982c98De2e15b9DF2A",
+        "0xE129927cfC61CE2F0b2a0CA6d8f9482D4ee60c64",
+        "0x4E5B2e1dc63F6b91cb6Cd759936495434C7e972F"
+      ]
+    },
+    "mitre_attack": [
+      {
+        "id": "T1657",
+        "name": "Financial Theft"
+      }
+    ],
+    "reasons": [
+      "Гаманець ETH: баланс 101.80247578 ETH; транзакцій 429; остання активність 2026-04-09",
+      "Репутація гаманця: Lazarus Group — Ronin Bridge hacker (OFAC SDN) [sanctions] — джерело: US Treasury OFAC SDN list, 2022-04-14 (DPRK / Lazarus, $625M Ronin theft)"
+    ],
+    "recommendations": [
+      "ЗАБЛОКУВАТИ на периметрі (firewall / proxy / EDR).",
+      "Ескалювати до групи реагування на інциденти.",
+      "Провести пошук індикатора в логах (останні 90 днів)."
+    ]
   }
 ]

@@ -1,0 +1,13 @@
+{
+  "source": "wallet_reputation",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "listed": true,
+    "category": "sanctions",
+    "label": "Lazarus Group — Ronin Bridge hacker (OFAC SDN)",
+    "source": "US Treasury OFAC SDN list, 2022-04-14 (DPRK / Lazarus, $625M Ronin theft)"
+  },
+  "fetched_at": "2026-06-22T14:01:43.478198+00:00"
+}

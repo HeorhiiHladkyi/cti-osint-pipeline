@@ -1,14 +1,14 @@
 {
   "type": "bundle",
-  "id": "bundle--6a8e2c76-e706-4e03-8f35-89a9737037ea",
+  "id": "bundle--433b39f0-0356-4a9d-9cb4-0692462090bc",
   "spec_version": "2.1",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--207622ac-47b1-435e-bcc9-7b1a37793b75",
-      "created": "2026-06-22T13:55:26.000Z",
-      "modified": "2026-06-22T13:55:26.000Z",
+      "id": "indicator--94b48d79-2d7f-4fcc-952f-839dc82dfcbb",
+      "created": "2026-06-22T14:01:43.000Z",
+      "modified": "2026-06-22T14:01:43.000Z",
       "name": "btc: 115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn",
       "description": "Гаманець BTC: баланс 0.46702392 BTC; транзакцій 124; остання активність 2020-11-14; Репутація гаманця: WannaCry ransom wallet [ransomware] — джерело: WannaCry IR reports (2017), widely documented",
       "indicator_types": [
@@ -16,7 +16,7 @@
       ],
       "pattern": "[cryptocurrency-wallet:value = '115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:55:26.000Z",
+      "valid_from": "2026-06-22T14:01:43.000Z",
       "confidence": 90,
       "labels": [
         "malicious-activity"
@@ -29,9 +29,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c50a3453-8b49-47cb-bb05-26e4f9d93b4c",
-      "created": "2026-06-22T13:55:26.000Z",
-      "modified": "2026-06-22T13:55:26.000Z",
+      "id": "indicator--6cc62f01-bb12-416a-a263-68565fd8aa10",
+      "created": "2026-06-22T14:01:43.000Z",
+      "modified": "2026-06-22T14:01:43.000Z",
       "name": "eth: 0x8589427373D6D84E98730D7795D8f6f8731FDA16",
       "description": "Гаманець ETH: баланс 0.00764436 ETH; транзакцій 591; остання активність 2026-04-13; Репутація гаманця: Tornado Cash — Donation (OFAC SDN) [sanctions] — джерело: US Treasury OFAC SDN list, 2022-08-08",
       "indicator_types": [
@@ -39,7 +39,30 @@
       ],
       "pattern": "[cryptocurrency-wallet:value = '0x8589427373D6D84E98730D7795D8f6f8731FDA16']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:55:26.000Z",
+      "valid_from": "2026-06-22T14:01:43.000Z",
+      "confidence": 90,
+      "labels": [
+        "malicious-activity"
+      ],
+      "x_threat_level": "critical",
+      "x_mitre_attack": [
+        "T1657"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e2d5df1e-04a4-4691-bc64-f3f965fc7f1c",
+      "created": "2026-06-22T14:01:43.000Z",
+      "modified": "2026-06-22T14:01:43.000Z",
+      "name": "eth: 0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "description": "Гаманець ETH: баланс 101.80247578 ETH; транзакцій 429; остання активність 2026-04-09; Репутація гаманця: Lazarus Group — Ronin Bridge hacker (OFAC SDN) [sanctions] — джерело: US Treasury OFAC SDN list, 2022-04-14 (DPRK / Lazarus, $625M Ronin theft)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[cryptocurrency-wallet:value = '0x098B716B8Aaf21512996dC57EB0615e2383E2f96']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T14:01:43.000Z",
       "confidence": 90,
       "labels": [
         "malicious-activity"

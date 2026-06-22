@@ -89,6 +89,51 @@
       "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
       "kind": "wallet",
       "level": "unknown"
+    },
+    {
+      "id": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "kind": "ioc",
+      "level": "critical"
+    },
+    {
+      "id": "0x8C75aD518Dce956b488AB65E36aB229d8664BF29",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xE546480138D50Bb841B204691C39cC514858d101",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xFc3Ff9d9Abd3ABADda68821e443779bEb1082f43",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x09564aC9288eD66bD32E793E76ce4336C1a9eD00",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xbc25D517cc9d7eA453622dEd3213302dE34d29Eb",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xdf225c04450504e9198569982c98De2e15b9DF2A",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0xE129927cfC61CE2F0b2a0CA6d8f9482D4ee60c64",
+      "kind": "wallet",
+      "level": "unknown"
+    },
+    {
+      "id": "0x4E5B2e1dc63F6b91cb6Cd759936495434C7e972F",
+      "kind": "wallet",
+      "level": "unknown"
     }
   ],
   "edges": [
@@ -170,6 +215,46 @@
     {
       "source": "0x8589427373D6D84E98730D7795D8f6f8731FDA16",
       "target": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "target": "0x8C75aD518Dce956b488AB65E36aB229d8664BF29",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "target": "0xE546480138D50Bb841B204691C39cC514858d101",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "target": "0xFc3Ff9d9Abd3ABADda68821e443779bEb1082f43",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "target": "0x09564aC9288eD66bD32E793E76ce4336C1a9eD00",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "target": "0xbc25D517cc9d7eA453622dEd3213302dE34d29Eb",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "target": "0xdf225c04450504e9198569982c98De2e15b9DF2A",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "target": "0xE129927cfC61CE2F0b2a0CA6d8f9482D4ee60c64",
+      "rel": "tx_counterparty"
+    },
+    {
+      "source": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "target": "0x4E5B2e1dc63F6b91cb6Cd759936495434C7e972F",
       "rel": "tx_counterparty"
     }
   ]

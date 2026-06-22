@@ -1,10 +1,13 @@
 {
   "_about": "Curated, public-source threat intel for crypto wallets. Keyless signal so the pipeline gives a REAL verdict for known-bad addresses offline. ETH keys are lowercased; BTC kept as-is (case-sensitive base58/bech32). Extend via keyed feeds (Chainabuse) when a key is present.",
+  "_sources": ["US Treasury OFAC SDN list", "FBI cyber PSAs (Lazarus / TraderTraitor)", "WannaCry IR reports", "Arkham / ZachXBT public attributions (Bybit hack, 2025)"],
   "addresses": {
     "0x8589427373d6d84e98730d7795d8f6f8731fda16": {"category": "sanctions", "label": "Tornado Cash — Donation (OFAC SDN)", "source": "US Treasury OFAC SDN list, 2022-08-08"},
     "0x722122df12d4e14e13ac3b6895a86e84145b6967": {"category": "sanctions", "label": "Tornado Cash — Router (OFAC SDN)", "source": "US Treasury OFAC SDN list, 2022-08-08"},
     "0xd90e2f925da726b50c4ed8d0fb90ad053324f31b": {"category": "sanctions", "label": "Tornado Cash — Router 2 (OFAC SDN)", "source": "US Treasury OFAC SDN list, 2022-08-08"},
     "0xa160cdab225685da1d56aa342ad8841c3b53f291": {"category": "sanctions", "label": "Tornado Cash — 100 ETH pool (OFAC SDN)", "source": "US Treasury OFAC SDN list, 2022-08-08"},
+    "0x098b716b8aaf21512996dc57eb0615e2383e2f96": {"category": "sanctions", "label": "Lazarus Group — Ronin Bridge hacker (OFAC SDN)", "source": "US Treasury OFAC SDN list, 2022-04-14 (DPRK / Lazarus, $625M Ronin theft)"},
+    "0xa0e1c89ef1a489c9c7de96311ed5ce5d32c20e4b": {"category": "sanctions", "label": "Lazarus Group — DPRK-linked (OFAC SDN)", "source": "US Treasury OFAC SDN list, 2022-04 (Lazarus cluster)"},
     "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn": {"category": "ransomware", "label": "WannaCry ransom wallet", "source": "WannaCry IR reports (2017), widely documented"},
     "12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw": {"category": "ransomware", "label": "WannaCry ransom wallet", "source": "WannaCry IR reports (2017), widely documented"},
     "13AM4VW2dhxYgXeQepoHkHSQuy6NgaEb94": {"category": "ransomware", "label": "WannaCry ransom wallet", "source": "WannaCry IR reports (2017), widely documented"}
