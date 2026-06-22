@@ -1,0 +1,8 @@
+# One IoC per line. Lines starting with # are ignored.
+# Mixed types are fine: IPv4, domain, URL, MD5/SHA256, email.
+8.8.8.8
+example.com
+http://testphp.vulnweb.com/
+44d88612fea8a8f36de82e1278abb02f
+185.220.101.44
+phishy-login-portal.test

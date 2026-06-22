@@ -1,0 +1,12 @@
+requests>=2.31
+dnspython>=2.6
+python-whois>=0.9.4
+jinja2>=3.1
+networkx>=3.2
+pyvis>=0.3.2
+pydantic>=2.6
+python-dotenv>=1.0
+loguru>=0.7
+tqdm>=4.66
+# Optional PDF export (heavy native deps on Windows — install only if you need PDF):
+#   weasyprint>=60

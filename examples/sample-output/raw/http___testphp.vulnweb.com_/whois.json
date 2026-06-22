@@ -1,0 +1,23 @@
+{
+  "source": "whois",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "registrar": "Gandi SAS",
+    "creation_date": [
+      "2010-06-14 07:50:29+00:00",
+      "2010-06-14 05:50:29+00:00"
+    ],
+    "expiration_date": "2027-06-14 07:50:29+00:00",
+    "name_servers": [
+      "NS-136.AWSDNS-17.COM",
+      "NS-1450.AWSDNS-53.ORG",
+      "NS-1588.AWSDNS-06.CO.UK",
+      "NS-557.AWSDNS-05.NET"
+    ],
+    "country": "MT",
+    "org": "Invicti Security Limited"
+  },
+  "fetched_at": "2026-06-22T12:08:54.481555+00:00"
+}

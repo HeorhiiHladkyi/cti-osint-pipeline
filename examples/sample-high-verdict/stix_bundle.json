@@ -1,0 +1,56 @@
+{
+  "type": "bundle",
+  "id": "bundle--dde743b8-d8cd-4afa-93b6-4dee07522f2a",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6368260f-abd9-4db1-b900-194f29f2e235",
+      "created": "2026-06-22T12:20:03.000Z",
+      "modified": "2026-06-22T12:20:03.000Z",
+      "name": "ipv4: 185.220.101.44",
+      "description": "VirusTotal: 11 engines flag malicious; AbuseIPDB confidence 100% (842 reports); AlienVault OTX: 7 threat pulses; Shodan: 1 known CVEs exposed; Exposed risky services: RDP",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '185.220.101.44']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T12:20:03.000Z",
+      "confidence": 90,
+      "labels": [
+        "malicious-activity"
+      ],
+      "x_threat_level": "critical",
+      "x_mitre_attack": [
+        "T1071",
+        "T1190",
+        "T1133"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--523aa603-c17b-4b15-8e8b-3bdc9828a9c6",
+      "created": "2026-06-22T12:20:03.000Z",
+      "modified": "2026-06-22T12:20:03.000Z",
+      "name": "domain: secure-login-verify.test",
+      "description": "VirusTotal: 4 engines flag malicious; Domain contains phishing-associated keyword",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'secure-login-verify.test']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T12:20:03.000Z",
+      "confidence": 75,
+      "labels": [
+        "malicious-activity"
+      ],
+      "x_threat_level": "high",
+      "x_mitre_attack": [
+        "T1071",
+        "T1566"
+      ]
+    }
+  ]
+}

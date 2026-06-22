@@ -1,0 +1,196 @@
+{
+  "nodes": [
+    {
+      "id": "8.8.8.8",
+      "kind": "ioc",
+      "level": "low"
+    },
+    {
+      "id": "dns.google",
+      "kind": "host",
+      "level": "unknown"
+    },
+    {
+      "id": "example.com",
+      "kind": "ioc",
+      "level": "low"
+    },
+    {
+      "id": "172.66.147.243",
+      "kind": "ip",
+      "level": "unknown"
+    },
+    {
+      "id": "104.20.23.154",
+      "kind": "ip",
+      "level": "unknown"
+    },
+    {
+      "id": "*.example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "AS207960 Test Intermediate - example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "dev.example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "m.example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "m.testexample.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "products.example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "subjectname@example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "support.example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "user@example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "www.example.com",
+      "kind": "subdomain",
+      "level": "unknown"
+    },
+    {
+      "id": "2606:4700:10::ac42:93f3",
+      "kind": "ip",
+      "level": "unknown"
+    },
+    {
+      "id": "http://testphp.vulnweb.com/",
+      "kind": "ioc",
+      "level": "low"
+    },
+    {
+      "id": "44.228.249.3",
+      "kind": "ip",
+      "level": "unknown"
+    },
+    {
+      "id": "44d88612fea8a8f36de82e1278abb02f",
+      "kind": "ioc",
+      "level": "unknown"
+    },
+    {
+      "id": "185.220.101.44",
+      "kind": "ioc",
+      "level": "low"
+    },
+    {
+      "id": "tor-exit-44.for-privacy.net",
+      "kind": "host",
+      "level": "unknown"
+    },
+    {
+      "id": "phishy-login-portal.test",
+      "kind": "ioc",
+      "level": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "8.8.8.8",
+      "target": "dns.google",
+      "rel": "ptr"
+    },
+    {
+      "source": "example.com",
+      "target": "172.66.147.243",
+      "rel": "urlscan_observed"
+    },
+    {
+      "source": "example.com",
+      "target": "104.20.23.154",
+      "rel": "urlscan_observed"
+    },
+    {
+      "source": "example.com",
+      "target": "*.example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "AS207960 Test Intermediate - example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "dev.example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "m.example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "m.testexample.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "products.example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "subjectname@example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "support.example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "user@example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "www.example.com",
+      "rel": "ct_cert"
+    },
+    {
+      "source": "example.com",
+      "target": "2606:4700:10::ac42:93f3",
+      "rel": "urlscan_observed"
+    },
+    {
+      "source": "http://testphp.vulnweb.com/",
+      "target": "44.228.249.3",
+      "rel": "resolves_to"
+    },
+    {
+      "source": "185.220.101.44",
+      "target": "tor-exit-44.for-privacy.net",
+      "rel": "ptr"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CTI IoC Enrichment Report</title>
+<style>
+  :root { --bg:#0f1729; --panel:#fff; --muted:#6b7280; --border:#e6e9f0; }
+  * { box-sizing: border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; margin:0; background:#f4f6fb; color:#1c2333; }
+  header { background:var(--bg); color:#fff; padding:26px 32px; }
+  header h1 { margin:0 0 6px; font-size:22px; }
+  header .meta { color:#9aa6c0; font-size:13px; }
+  main { padding:24px 32px; max-width:1100px; }
+  .panel { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px; margin-bottom:18px; }
+  table { width:100%; border-collapse:collapse; }
+  th { text-align:left; font-size:11px; text-transform:uppercase; color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--border); }
+  td { padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; font-size:14px; }
+  code { background:#f1f5f9; padding:1px 5px; border-radius:4px; }
+  .lvl { padding:2px 9px; border-radius:6px; font-weight:700; font-size:12px; text-transform:uppercase; }
+  .critical { background:#fee2e2; color:#991b1b; } .high { background:#ffedd5; color:#9a3412; }
+  .medium { background:#fef9c3; color:#854d0e; } .low { background:#dcfce7; color:#166534; }
+  .unknown { background:#f1f5f9; color:#475569; }
+  .chip { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; margin:2px 3px 2px 0; }
+  ul { margin:6px 0; padding-left:18px; }
+  .src-ok { color:#166534; } .src-skip { color:#b45309; } .src-fail { color:#b91c1c; }
+  .small { color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CTI — IoC Enrichment Report</h1>
+  <div class="meta">
+    Generated 2026-06-22T12:20:03.999145+00:00 · 2 indicator(s) ·
+    Overall threat: <span class="lvl critical">critical</span>
+  </div>
+</header>
+<main>
+  <div class="panel">
+    <strong>Sources used</strong> (keys present):
+    
+      <span class="chip">virustotal: yes</span>
+    
+      <span class="chip">abuseipdb: yes</span>
+    
+      <span class="chip">shodan: yes</span>
+    
+      <span class="chip">otx: yes</span>
+    
+      <span class="chip">urlscan: yes</span>
+    
+    <div class="small" style="margin-top:8px">Keyless sources (DNS, WHOIS, crt.sh, RDAP, URLScan) always run; keyed sources are skipped without a key.</div>
+  </div>
+
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>185.220.101.44</code></strong>
+          <span class="chip">ipv4</span>
+        </td>
+        <td class="small">Score 100/100 · confidence high</td>
+        <td style="text-align:right"><span class="lvl critical">critical</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul><li>VirusTotal: 11 engines flag malicious</li><li>AbuseIPDB confidence 100% (842 reports)</li><li>AlienVault OTX: 7 threat pulses</li><li>Shodan: 1 known CVEs exposed</li><li>Exposed risky services: RDP</li></ul>
+
+    
+    <p><strong>MITRE ATT&CK</strong>:
+      <span class="chip">T1071 Application Layer Protocol</span><span class="chip">T1190 Exploit Public-Facing Application</span><span class="chip">T1133 External Remote Services</span>
+    </p>
+    
+
+    <p><strong>Recommended actions</strong></p>
+    <ul><li>BLOCK at perimeter (firewall / proxy / EDR).</li><li>Escalate to incident response.</li><li>Hunt for the indicator across logs (last 90 days).</li></ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>abuseipdb</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"abuseConfidenceScore": 100, "countryCode": "DE", "isp": "Tor Exit", "totalReports": 842}</code></td>
+        </tr>
+      
+        <tr>
+          <td>virustotal</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"harmless": 50, "malicious": 11, "reputation": -40, "suspicious": 2}</code></td>
+        </tr>
+      
+        <tr>
+          <td>shodan</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"asn": "AS208294", "hostnames": ["exit.tor.example"], "ports": [22, 3389], "vulns": ["CVE-2026-49777"]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>otx</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"pulse_count": 7, "pulses": ["Ransomware C2 infra"], "tags": ["ransomware", "c2"]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>dns</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"ptr": ["exit.tor.example."]}</code></td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+    <p class="small">Pivot edges: <span class="chip">ptr → exit.tor.example</span><span class="chip">shodan_hostname → exit.tor.example</span><span class="chip">in_asn → AS208294</span></p>
+    
+  </div>
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>secure-login-verify.test</code></strong>
+          <span class="chip">domain</span>
+        </td>
+        <td class="small">Score 58/100 · confidence medium</td>
+        <td style="text-align:right"><span class="lvl high">high</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul><li>VirusTotal: 4 engines flag malicious</li><li>Domain contains phishing-associated keyword</li></ul>
+
+    
+    <p><strong>MITRE ATT&CK</strong>:
+      <span class="chip">T1071 Application Layer Protocol</span><span class="chip">T1566 Phishing</span>
+    </p>
+    
+
+    <p><strong>Recommended actions</strong></p>
+    <ul><li>BLOCK at perimeter (firewall / proxy / EDR).</li><li>Escalate to incident response.</li><li>Hunt for the indicator across logs (last 90 days).</li></ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>virustotal</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"harmless": 60, "malicious": 4}</code></td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+  </div>
+  
+
+  <div class="panel small">
+    Artifacts: <code>output\2026-06-22_15-20-03</code> — raw/ (per-source JSON), evidence.sqlite, graph.html,
+    stix_bundle.json, iocs.json. Analyst owns the final judgement; AI/automation only proposes.
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+[
+  {
+    "indicator": "185.220.101.44",
+    "type": "ipv4",
+    "threat_level": "critical",
+    "score": 100,
+    "confidence": "high",
+    "mitre_attack": [
+      {
+        "id": "T1071",
+        "name": "Application Layer Protocol"
+      },
+      {
+        "id": "T1190",
+        "name": "Exploit Public-Facing Application"
+      },
+      {
+        "id": "T1133",
+        "name": "External Remote Services"
+      }
+    ],
+    "reasons": [
+      "VirusTotal: 11 engines flag malicious",
+      "AbuseIPDB confidence 100% (842 reports)",
+      "AlienVault OTX: 7 threat pulses",
+      "Shodan: 1 known CVEs exposed",
+      "Exposed risky services: RDP"
+    ],
+    "recommendations": [
+      "BLOCK at perimeter (firewall / proxy / EDR).",
+      "Escalate to incident response.",
+      "Hunt for the indicator across logs (last 90 days)."
+    ]
+  },
+  {
+    "indicator": "secure-login-verify.test",
+    "type": "domain",
+    "threat_level": "high",
+    "score": 58,
+    "confidence": "medium",
+    "mitre_attack": [
+      {
+        "id": "T1071",
+        "name": "Application Layer Protocol"
+      },
+      {
+        "id": "T1566",
+        "name": "Phishing"
+      }
+    ],
+    "reasons": [
+      "VirusTotal: 4 engines flag malicious",
+      "Domain contains phishing-associated keyword"
+    ],
+    "recommendations": [
+      "BLOCK at perimeter (firewall / proxy / EDR).",
+      "Escalate to incident response.",
+      "Hunt for the indicator across logs (last 90 days)."
+    ]
+  }
+]

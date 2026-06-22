@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CTI IoC Enrichment Report</title>
+<style>
+  :root { --bg:#0f1729; --panel:#fff; --muted:#6b7280; --border:#e6e9f0; }
+  * { box-sizing: border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; margin:0; background:#f4f6fb; color:#1c2333; }
+  header { background:var(--bg); color:#fff; padding:26px 32px; }
+  header h1 { margin:0 0 6px; font-size:22px; }
+  header .meta { color:#9aa6c0; font-size:13px; }
+  main { padding:24px 32px; max-width:1100px; }
+  .panel { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px; margin-bottom:18px; }
+  table { width:100%; border-collapse:collapse; }
+  th { text-align:left; font-size:11px; text-transform:uppercase; color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--border); }
+  td { padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; font-size:14px; }
+  code { background:#f1f5f9; padding:1px 5px; border-radius:4px; }
+  .lvl { padding:2px 9px; border-radius:6px; font-weight:700; font-size:12px; text-transform:uppercase; }
+  .critical { background:#fee2e2; color:#991b1b; } .high { background:#ffedd5; color:#9a3412; }
+  .medium { background:#fef9c3; color:#854d0e; } .low { background:#dcfce7; color:#166534; }
+  .unknown { background:#f1f5f9; color:#475569; }
+  .chip { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; margin:2px 3px 2px 0; }
+  ul { margin:6px 0; padding-left:18px; }
+  .src-ok { color:#166534; } .src-skip { color:#b45309; } .src-fail { color:#b91c1c; }
+  .small { color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CTI — IoC Enrichment Report</h1>
+  <div class="meta">
+    Generated {{ r.generated_at }} · {{ r.results|length }} indicator(s) ·
+    Overall threat: <span class="lvl {{ r.overall }}">{{ r.overall }}</span>
+  </div>
+</header>
+<main>
+  <div class="panel">
+    <strong>Sources used</strong> (keys present):
+    {% for name, on in r.key_status.items() %}
+      <span class="chip">{{ name }}: {{ 'yes' if on else 'no' }}</span>
+    {% endfor %}
+    <div class="small" style="margin-top:8px">Keyless sources (DNS, WHOIS, crt.sh, RDAP, URLScan) always run; keyed sources are skipped without a key.</div>
+  </div>
+
+  {% for ioc in r.results %}
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>{{ ioc.indicator }}</code></strong>
+          <span class="chip">{{ ioc.type }}</span>
+        </td>
+        <td class="small">Score {{ ioc.score }}/100 · confidence {{ ioc.confidence }}</td>
+        <td style="text-align:right"><span class="lvl {{ ioc.threat_level }}">{{ ioc.threat_level }}</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul>{% for reason in ioc.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>
+
+    {% if ioc.mitre %}
+    <p><strong>MITRE ATT&CK</strong>:
+      {% for m in ioc.mitre %}<span class="chip">{{ m.id }} {{ m.name }}</span>{% endfor %}
+    </p>
+    {% endif %}
+
+    <p><strong>Recommended actions</strong></p>
+    <ul>{% for rec in ioc.recommendations %}<li>{{ rec }}</li>{% endfor %}</ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      {% for s in ioc.sources %}
+        <tr>
+          <td>{{ s.source }}</td>
+          <td>{% if s.skipped %}<span class="src-skip">skipped</span>{% elif s.ok %}<span class="src-ok">ok</span>{% else %}<span class="src-fail">failed</span>{% endif %}</td>
+          <td class="small">{% if s.ok %}<code>{{ s.data|tojson }}</code>{% else %}{{ s.reason }}{% endif %}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    {% if ioc.related %}
+    <p class="small">Pivot edges: {% for e in ioc.related %}<span class="chip">{{ e.rel }} → {{ e.target }}</span>{% endfor %}</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <div class="panel small">
+    Artifacts: <code>{{ r.run_dir }}</code> — raw/ (per-source JSON), evidence.sqlite, graph.html,
+    stix_bundle.json, iocs.json. Analyst owns the final judgement; AI/automation only proposes.
+  </div>
+</main>
+</body>
+</html>

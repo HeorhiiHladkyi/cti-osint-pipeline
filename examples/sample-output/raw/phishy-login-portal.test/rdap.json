@@ -1,0 +1,8 @@
+{
+  "source": "rdap",
+  "ok": false,
+  "skipped": false,
+  "reason": "HTTP 404",
+  "data": {},
+  "fetched_at": "2026-06-22T12:09:11.819104+00:00"
+}

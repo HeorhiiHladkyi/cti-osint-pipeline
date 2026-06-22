@@ -1,0 +1,12 @@
+{
+  "source": "crtsh",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "count": 0,
+    "certificates": [],
+    "subdomains": []
+  },
+  "fetched_at": "2026-06-22T12:09:11.482816+00:00"
+}

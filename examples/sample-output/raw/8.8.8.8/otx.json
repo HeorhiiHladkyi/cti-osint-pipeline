@@ -1,0 +1,8 @@
+{
+  "source": "otx",
+  "ok": false,
+  "skipped": true,
+  "reason": "no OTX_API_KEY",
+  "data": {},
+  "fetched_at": "2026-06-22T12:08:40.395722+00:00"
+}

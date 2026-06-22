@@ -1,0 +1,92 @@
+[
+  {
+    "indicator": "8.8.8.8",
+    "type": "ipv4",
+    "threat_level": "low",
+    "score": 0,
+    "confidence": "low",
+    "mitre_attack": [],
+    "reasons": [
+      "No malicious signals from queried sources"
+    ],
+    "recommendations": [
+      "No action; record for context."
+    ]
+  },
+  {
+    "indicator": "example.com",
+    "type": "domain",
+    "threat_level": "low",
+    "score": 0,
+    "confidence": "low",
+    "mitre_attack": [],
+    "reasons": [
+      "No malicious signals from queried sources"
+    ],
+    "recommendations": [
+      "No action; record for context."
+    ]
+  },
+  {
+    "indicator": "http://testphp.vulnweb.com/",
+    "type": "url",
+    "threat_level": "low",
+    "score": 0,
+    "confidence": "low",
+    "mitre_attack": [],
+    "reasons": [
+      "No CT-log certificates (very new or non-public host)"
+    ],
+    "recommendations": [
+      "No action; record for context."
+    ]
+  },
+  {
+    "indicator": "44d88612fea8a8f36de82e1278abb02f",
+    "type": "md5",
+    "threat_level": "unknown",
+    "score": 0,
+    "confidence": "low",
+    "mitre_attack": [],
+    "reasons": [
+      "No data returned"
+    ],
+    "recommendations": [
+      "Insufficient data — re-run with API keys configured."
+    ]
+  },
+  {
+    "indicator": "185.220.101.44",
+    "type": "ipv4",
+    "threat_level": "low",
+    "score": 0,
+    "confidence": "low",
+    "mitre_attack": [],
+    "reasons": [
+      "No malicious signals from queried sources"
+    ],
+    "recommendations": [
+      "No action; record for context."
+    ]
+  },
+  {
+    "indicator": "phishy-login-portal.test",
+    "type": "domain",
+    "threat_level": "low",
+    "score": 10,
+    "confidence": "low",
+    "mitre_attack": [
+      {
+        "id": "T1566",
+        "name": "Phishing"
+      }
+    ],
+    "reasons": [
+      "Domain contains phishing-associated keyword",
+      "No CT-log certificates (very new or non-public host)"
+    ],
+    "recommendations": [
+      "No action; record for context."
+    ]
+  }
+]

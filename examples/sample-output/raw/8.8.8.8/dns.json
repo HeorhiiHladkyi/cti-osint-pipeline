@@ -1,0 +1,12 @@
+{
+  "source": "dns",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "ptr": [
+      "dns.google."
+    ]
+  },
+  "fetched_at": "2026-06-22T12:08:39.027214+00:00"
+}

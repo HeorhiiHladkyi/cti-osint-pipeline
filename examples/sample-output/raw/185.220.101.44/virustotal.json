@@ -1,0 +1,8 @@
+{
+  "source": "virustotal",
+  "ok": false,
+  "skipped": true,
+  "reason": "no VIRUSTOTAL_API_KEY",
+  "data": {},
+  "fetched_at": "2026-06-22T12:09:09.933085+00:00"
+}

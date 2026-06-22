@@ -1,0 +1,8 @@
+{
+  "source": "whois",
+  "ok": false,
+  "skipped": false,
+  "reason": "Whois command returned no output",
+  "data": {},
+  "fetched_at": "2026-06-22T12:09:09.971698+00:00"
+}

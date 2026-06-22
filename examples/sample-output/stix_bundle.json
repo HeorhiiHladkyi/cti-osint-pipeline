@@ -1,0 +1,135 @@
+{
+  "type": "bundle",
+  "id": "bundle--dd33a0a5-4a69-41dc-ad67-9859a49a0475",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--746718ae-cb92-4da1-a8fa-e36dc0eaacaf",
+      "created": "2026-06-22T12:09:12.000Z",
+      "modified": "2026-06-22T12:09:12.000Z",
+      "name": "ipv4: 8.8.8.8",
+      "description": "No malicious signals from queried sources",
+      "indicator_types": [
+        "benign"
+      ],
+      "pattern": "[ipv4-addr:value = '8.8.8.8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T12:09:12.000Z",
+      "confidence": 20,
+      "labels": [
+        "benign"
+      ],
+      "x_threat_level": "low",
+      "x_mitre_attack": []
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--06a44df6-2a8b-40c6-bd99-8fea8b5ba182",
+      "created": "2026-06-22T12:09:12.000Z",
+      "modified": "2026-06-22T12:09:12.000Z",
+      "name": "domain: example.com",
+      "description": "No malicious signals from queried sources",
+      "indicator_types": [
+        "benign"
+      ],
+      "pattern": "[domain-name:value = 'example.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T12:09:12.000Z",
+      "confidence": 20,
+      "labels": [
+        "benign"
+      ],
+      "x_threat_level": "low",
+      "x_mitre_attack": []
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6dc7879b-e6a7-4775-a69f-bf5b4a69c9ab",
+      "created": "2026-06-22T12:09:12.000Z",
+      "modified": "2026-06-22T12:09:12.000Z",
+      "name": "url: http://testphp.vulnweb.com/",
+      "description": "No CT-log certificates (very new or non-public host)",
+      "indicator_types": [
+        "benign"
+      ],
+      "pattern": "[url:value = 'http://testphp.vulnweb.com/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T12:09:12.000Z",
+      "confidence": 20,
+      "labels": [
+        "benign"
+      ],
+      "x_threat_level": "low",
+      "x_mitre_attack": []
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f7954e90-81cc-4a41-a414-8d6d5cac5301",
+      "created": "2026-06-22T12:09:12.000Z",
+      "modified": "2026-06-22T12:09:12.000Z",
+      "name": "md5: 44d88612fea8a8f36de82e1278abb02f",
+      "description": "No data returned",
+      "indicator_types": [
+        "benign"
+      ],
+      "pattern": "[file:hashes.MD5 = '44d88612fea8a8f36de82e1278abb02f']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T12:09:12.000Z",
+      "confidence": 0,
+      "labels": [
+        "benign"
+      ],
+      "x_threat_level": "unknown",
+      "x_mitre_attack": []
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f6895a81-33a9-4615-a0d1-260e1bc7bdf6",
+      "created": "2026-06-22T12:09:12.000Z",
+      "modified": "2026-06-22T12:09:12.000Z",
+      "name": "ipv4: 185.220.101.44",
+      "description": "No malicious signals from queried sources",
+      "indicator_types": [
+        "benign"
+      ],
+      "pattern": "[ipv4-addr:value = '185.220.101.44']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T12:09:12.000Z",
+      "confidence": 20,
+      "labels": [
+        "benign"
+      ],
+      "x_threat_level": "low",
+      "x_mitre_attack": []
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f906007f-32ba-45e2-ac70-9a567c7d91b9",
+      "created": "2026-06-22T12:09:12.000Z",
+      "modified": "2026-06-22T12:09:12.000Z",
+      "name": "domain: phishy-login-portal.test",
+      "description": "Domain contains phishing-associated keyword; No CT-log certificates (very new or non-public host)",
+      "indicator_types": [
+        "benign"
+      ],
+      "pattern": "[domain-name:value = 'phishy-login-portal.test']",
+      "pattern_type": "stix",
+      "valid_from": "2026-06-22T12:09:12.000Z",
+      "confidence": 20,
+      "labels": [
+        "benign"
+      ],
+      "x_threat_level": "low",
+      "x_mitre_attack": [
+        "T1566"
+      ]
+    }
+  ]
+}

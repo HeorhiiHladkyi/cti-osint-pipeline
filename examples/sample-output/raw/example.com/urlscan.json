@@ -1,0 +1,62 @@
+{
+  "source": "urlscan",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "total": 10000,
+    "results": [
+      {
+        "url": "https://example.com/",
+        "ip": "2606:4700:10::ac42:93f3",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "172.66.147.243",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://www.example.com/?utm_medium=email&utm_source=Eloqua&utm_campaign=20260618_ge26_2%20weeks%20ger%20free_RSD",
+        "ip": "172.66.147.243",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "172.66.147.243",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://www.example.com/",
+        "ip": "172.66.147.243",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "104.20.23.154",
+        "server": "cloudflare"
+      }
+    ]
+  },
+  "fetched_at": "2026-06-22T12:08:53.506376+00:00"
+}

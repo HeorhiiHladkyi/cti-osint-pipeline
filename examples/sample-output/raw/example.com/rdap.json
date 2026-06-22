@@ -1,0 +1,27 @@
+{
+  "source": "rdap",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "handle": "2336799_DOMAIN_COM-VRSN",
+    "name": null,
+    "country": null,
+    "asn": null,
+    "events": [
+      {
+        "registration": "1995-08-14T04:00:00Z"
+      },
+      {
+        "expiration": "2026-08-13T04:00:00Z"
+      },
+      {
+        "last changed": "2026-01-16T18:26:50Z"
+      },
+      {
+        "last update of RDAP database": "2026-06-22T12:08:45Z"
+      }
+    ]
+  },
+  "fetched_at": "2026-06-22T12:08:52.793196+00:00"
+}

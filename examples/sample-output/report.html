@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CTI IoC Enrichment Report</title>
+<style>
+  :root { --bg:#0f1729; --panel:#fff; --muted:#6b7280; --border:#e6e9f0; }
+  * { box-sizing: border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; margin:0; background:#f4f6fb; color:#1c2333; }
+  header { background:var(--bg); color:#fff; padding:26px 32px; }
+  header h1 { margin:0 0 6px; font-size:22px; }
+  header .meta { color:#9aa6c0; font-size:13px; }
+  main { padding:24px 32px; max-width:1100px; }
+  .panel { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px; margin-bottom:18px; }
+  table { width:100%; border-collapse:collapse; }
+  th { text-align:left; font-size:11px; text-transform:uppercase; color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--border); }
+  td { padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; font-size:14px; }
+  code { background:#f1f5f9; padding:1px 5px; border-radius:4px; }
+  .lvl { padding:2px 9px; border-radius:6px; font-weight:700; font-size:12px; text-transform:uppercase; }
+  .critical { background:#fee2e2; color:#991b1b; } .high { background:#ffedd5; color:#9a3412; }
+  .medium { background:#fef9c3; color:#854d0e; } .low { background:#dcfce7; color:#166534; }
+  .unknown { background:#f1f5f9; color:#475569; }
+  .chip { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; margin:2px 3px 2px 0; }
+  ul { margin:6px 0; padding-left:18px; }
+  .src-ok { color:#166534; } .src-skip { color:#b45309; } .src-fail { color:#b91c1c; }
+  .small { color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CTI — IoC Enrichment Report</h1>
+  <div class="meta">
+    Generated 2026-06-22T12:09:12.609073+00:00 · 6 indicator(s) ·
+    Overall threat: <span class="lvl low">low</span>
+  </div>
+</header>
+<main>
+  <div class="panel">
+    <strong>Sources used</strong> (keys present):
+    
+      <span class="chip">virustotal: no</span>
+    
+      <span class="chip">abuseipdb: no</span>
+    
+      <span class="chip">shodan: no</span>
+    
+      <span class="chip">otx: no</span>
+    
+      <span class="chip">urlscan: yes</span>
+    
+    <div class="small" style="margin-top:8px">Keyless sources (DNS, WHOIS, crt.sh, RDAP, URLScan) always run; keyed sources are skipped without a key.</div>
+  </div>
+
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>8.8.8.8</code></strong>
+          <span class="chip">ipv4</span>
+        </td>
+        <td class="small">Score 0/100 · confidence low</td>
+        <td style="text-align:right"><span class="lvl low">low</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul><li>No malicious signals from queried sources</li></ul>
+
+    
+
+    <p><strong>Recommended actions</strong></p>
+    <ul><li>No action; record for context.</li></ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>dns</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"ptr": ["dns.google."]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>rdap</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"asn": null, "country": null, "endAddress": "8.8.8.255", "events": [{"last changed": "2023-12-28T17:24:56-05:00"}, {"registration": "2023-12-28T17:24:33-05:00"}], "handle": "NET-8-8-8-0-2", "ipVersion": "v4", "name": "GOGL", "startAddress": "8.8.8.0", "type": "DIRECT ALLOCATION"}</code></td>
+        </tr>
+      
+        <tr>
+          <td>urlscan</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"results": [{"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/c/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/c/"}, {"ip": "8.8.8.8", "server": "scaffolding on HTTPServer2", "url": "https://dns.google/"}], "total": 5716}</code></td>
+        </tr>
+      
+        <tr>
+          <td>virustotal</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no VIRUSTOTAL_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>abuseipdb</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no ABUSEIPDB_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>shodan</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no SHODAN_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>otx</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no OTX_API_KEY</td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+    <p class="small">Pivot edges: <span class="chip">ptr → dns.google</span></p>
+    
+  </div>
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>example.com</code></strong>
+          <span class="chip">domain</span>
+        </td>
+        <td class="small">Score 0/100 · confidence low</td>
+        <td style="text-align:right"><span class="lvl low">low</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul><li>No malicious signals from queried sources</li></ul>
+
+    
+
+    <p><strong>Recommended actions</strong></p>
+    <ul><li>No action; record for context.</li></ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>dns</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"A": ["172.66.147.243", "104.20.23.154"], "AAAA": ["2606:4700:10::ac42:93f3", "2606:4700:10::6814:179a"], "MX": ["0 ."], "NS": ["elliott.ns.cloudflare.com.", "hera.ns.cloudflare.com."], "TXT": ["v=spf1 -all", "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>whois</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"country": null, "creation_date": "1995-08-14 04:00:00+00:00", "expiration_date": "2026-08-13 04:00:00+00:00", "name_servers": ["ELLIOTT.NS.CLOUDFLARE.COM", "HERA.NS.CLOUDFLARE.COM"], "org": null, "registrar": "RESERVED-Internet Assigned Numbers Authority"}</code></td>
+        </tr>
+      
+        <tr>
+          <td>crtsh</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"certificates": [{"issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing RSA CA 3", "name_value": "*.example.com\nexample.com", "not_before": "2026-05-31T21:39:00"}, {"issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3", "name_value": "*.example.com\nexample.com", "not_before": "2026-05-31T21:39:12"}, {"issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36", "name_value": "*.example.com\nexample.com", "not_before": "2026-04-15T00:00:00"}, {"issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV R36", "name_value": "*.example.com\nexample.com", "not_before": "2026-04-15T00:00:00"}, {"issuer": "C=US, O=\"CLOUDFLARE, INC.\", CN=Cloudflare TLS Issuing ECC CA 1", "name_value": "*.example.com\nexample.com", "not_before": "2026-04-02T21:18:57"}, {"issuer": "C=US, O=\"CLOUDFLARE, INC.\", CN=Cloudflare TLS Issuing RSA CA 1", "name_value": "*.example.com\nexample.com", "not_before": "2026-04-02T21:17:13"}, {"issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA OV R36", "name_value": "example.com\nwww.example.com", "not_before": "2025-12-02T00:00:00"}, {"issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA OV R36", "name_value": "example.com", "not_before": "2025-11-20T00:00:00"}, {"issuer": "C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo ECC Organization Validation Secure Server CA", "name_value": "*.example.com\nexample.com", "not_before": "2025-02-07T00:00:00"}, {"issuer": "C=US, O=DigiCert Inc, CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1", "name_value": "*.example.com\nexample.com", "not_before": "2025-01-15T00:00:00"}, {"issuer": "C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Domain Validation Secure Server CA", "name_value": "example.com\nwww.example.com", "not_before": "2025-01-27T00:00:00"}, {"issuer": "C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1", "name_value": "example.com\nwww.example.com", "not_before": "2025-01-14T00:00:00"}, {"issuer": "C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1", "name_value": "example.com\nwww.example.com", "not_before": "2023-01-13T00:00:00"}, {"issuer": "C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA", "name_value": "example.com\nwww.example.com", "not_before": "2018-11-28T00:00:00"}, {"issuer": "emailAddress=pki_admin@sungard.com, O=SunGard Availability Services, CN=SAS Public CA v1", "name_value": "subjectname@example.com", "not_before": "2010-09-02T16:36:49"}, {"issuer": "C=US, O=\"thawte, Inc.\", CN=thawte SSL CA - G2", "name_value": "example.com\nm.testexample.com\nwww.example.com", "not_before": "2016-07-14T00:00:00"}, {"issuer": "C=US, O=\"thawte, Inc.\", CN=thawte SSL CA - G2", "name_value": "*.example.com\nexample.com", "not_before": "2016-07-14T00:00:00"}, {"issuer": "C=US, O=\"thawte, Inc.\", CN=thawte SSL CA - G2", "name_value": "*.example.com\nexample.com\nm.example.com\nwww.example.com", "not_before": "2016-07-14T00:00:00"}, {"issuer": "C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec Class 3 Secure Server CA - G4", "name_value": "dev.example.com\nexample.com\nproducts.example.com\nsupport.example.com\nwww.example.com", "not_before": "2016-07-14T00:00:00"}, {"issuer": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance Server CA", "name_value": "example.com\nwww.example.com", "not_before": "2015-11-03T00:00:00"}, {"issuer": "Issuer Not Found", "name_value": "example.com\nuser@example.com", "not_before": "2023-01-27T01:21:18"}, {"issuer": "C=GB, ST=Cymru, O=AS207960 Cyfyngedig, OU=AS207960 Department of Random Numbers, CN=AS207960 Test CA", "name_value": "AS207960 Test Intermediate - example.com", "not_before": "2021-08-31T15:55:23"}], "count": 22, "subdomains": ["*.example.com", "AS207960 Test Intermediate - example.com", "dev.example.com", "example.com", "m.example.com", "m.testexample.com", "products.example.com", "subjectname@example.com", "support.example.com", "user@example.com", "www.example.com"]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>rdap</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"asn": null, "country": null, "events": [{"registration": "1995-08-14T04:00:00Z"}, {"expiration": "2026-08-13T04:00:00Z"}, {"last changed": "2026-01-16T18:26:50Z"}, {"last update of RDAP database": "2026-06-22T12:08:45Z"}], "handle": "2336799_DOMAIN_COM-VRSN", "name": null}</code></td>
+        </tr>
+      
+        <tr>
+          <td>urlscan</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"results": [{"ip": "2606:4700:10::ac42:93f3", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "172.66.147.243", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "172.66.147.243", "server": "cloudflare", "url": "https://www.example.com/?utm_medium=email\u0026utm_source=Eloqua\u0026utm_campaign=20260618_ge26_2%20weeks%20ger%20free_RSD"}, {"ip": "172.66.147.243", "server": "cloudflare", "url": "https://example.com/"}, {"ip": "172.66.147.243", "server": "cloudflare", "url": "https://www.example.com/"}, {"ip": "104.20.23.154", "server": "cloudflare", "url": "https://example.com/"}], "total": 10000}</code></td>
+        </tr>
+      
+        <tr>
+          <td>virustotal</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no VIRUSTOTAL_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>otx</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no OTX_API_KEY</td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+    <p class="small">Pivot edges: <span class="chip">resolves_to → 172.66.147.243</span><span class="chip">resolves_to → 104.20.23.154</span><span class="chip">ct_cert → *.example.com</span><span class="chip">ct_cert → AS207960 Test Intermediate - example.com</span><span class="chip">ct_cert → dev.example.com</span><span class="chip">ct_cert → m.example.com</span><span class="chip">ct_cert → m.testexample.com</span><span class="chip">ct_cert → products.example.com</span><span class="chip">ct_cert → subjectname@example.com</span><span class="chip">ct_cert → support.example.com</span><span class="chip">ct_cert → user@example.com</span><span class="chip">ct_cert → www.example.com</span><span class="chip">urlscan_observed → 2606:4700:10::ac42:93f3</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 104.20.23.154</span><span class="chip">urlscan_observed → 172.66.147.243</span><span class="chip">urlscan_observed → 172.66.147.243</span><span class="chip">urlscan_observed → 172.66.147.243</span></p>
+    
+  </div>
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>http://testphp.vulnweb.com/</code></strong>
+          <span class="chip">url</span>
+        </td>
+        <td class="small">Score 0/100 · confidence low</td>
+        <td style="text-align:right"><span class="lvl low">low</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul><li>No CT-log certificates (very new or non-public host)</li></ul>
+
+    
+
+    <p><strong>Recommended actions</strong></p>
+    <ul><li>No action; record for context.</li></ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>dns</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"A": ["44.228.249.3"], "AAAA": [], "MX": [], "NS": [], "TXT": ["google-site-verification:toEctYsulNIxgraKk7H3z58PCyz2IOCc36pIupEPmYQ"]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>whois</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"country": "MT", "creation_date": ["2010-06-14 07:50:29+00:00", "2010-06-14 05:50:29+00:00"], "expiration_date": "2027-06-14 07:50:29+00:00", "name_servers": ["NS-136.AWSDNS-17.COM", "NS-1450.AWSDNS-53.ORG", "NS-1588.AWSDNS-06.CO.UK", "NS-557.AWSDNS-05.NET"], "org": "Invicti Security Limited", "registrar": "Gandi SAS"}</code></td>
+        </tr>
+      
+        <tr>
+          <td>crtsh</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"certificates": [], "count": 0, "subdomains": []}</code></td>
+        </tr>
+      
+        <tr>
+          <td>rdap</td>
+          <td><span class="src-fail">failed</span></td>
+          <td class="small">HTTP 404</td>
+        </tr>
+      
+        <tr>
+          <td>urlscan</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"results": [{"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/"}, {"ip": null, "server": null, "url": "http://testphp.vulnweb.com/artists.php?artist=1"}], "total": 2116}</code></td>
+        </tr>
+      
+        <tr>
+          <td>virustotal</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no VIRUSTOTAL_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>otx</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no OTX_API_KEY</td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+    <p class="small">Pivot edges: <span class="chip">resolves_to → 44.228.249.3</span></p>
+    
+  </div>
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>44d88612fea8a8f36de82e1278abb02f</code></strong>
+          <span class="chip">md5</span>
+        </td>
+        <td class="small">Score 0/100 · confidence low</td>
+        <td style="text-align:right"><span class="lvl unknown">unknown</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul><li>No data returned</li></ul>
+
+    
+
+    <p><strong>Recommended actions</strong></p>
+    <ul><li>Insufficient data — re-run with API keys configured.</li></ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>virustotal</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no VIRUSTOTAL_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>otx</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no OTX_API_KEY</td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+  </div>
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>185.220.101.44</code></strong>
+          <span class="chip">ipv4</span>
+        </td>
+        <td class="small">Score 0/100 · confidence low</td>
+        <td style="text-align:right"><span class="lvl low">low</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul><li>No malicious signals from queried sources</li></ul>
+
+    
+
+    <p><strong>Recommended actions</strong></p>
+    <ul><li>No action; record for context.</li></ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>dns</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"ptr": ["tor-exit-44.for-privacy.net."]}</code></td>
+        </tr>
+      
+        <tr>
+          <td>rdap</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"asn": null, "country": "DE", "endAddress": "185.220.101.63", "events": [{"registration": "2021-08-31T19:06:52Z"}, {"last changed": "2021-08-31T19:06:52Z"}], "handle": "185.220.101.32 - 185.220.101.63", "ipVersion": "v4", "name": "TOR-EXIT", "startAddress": "185.220.101.32", "type": "ASSIGNED PA"}</code></td>
+        </tr>
+      
+        <tr>
+          <td>urlscan</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"results": [{"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/ldr.sh"}, {"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/10044"}, {"ip": "185.220.101.44", "server": null, "url": "http://tor-exit-44.for-privacy.net/"}, {"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/"}, {"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/tor/server/fp/e03e581aa42a211f69dc63608b1980f10ae52c26"}, {"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/tor/server/fp/9973e1e9730a58fdba9e112d2b3342d2c0d921b5"}, {"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/tor/server/fp/0802deb6929c97cee49ffd1a7123dd06926a885a"}, {"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/tor/server/fp/49e5fb957045fddc8c53255ceb6ba653e1e9aa5d"}, {"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/tor/server/fp/835ffe642efa3bb7936663d2365a15d319fb6226"}, {"ip": "185.220.101.44", "server": null, "url": "http://185.220.101.44/tor/server/fp/615abea2de76eb3760bc51e7306baa59f15cd8f2"}], "total": 242}</code></td>
+        </tr>
+      
+        <tr>
+          <td>virustotal</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no VIRUSTOTAL_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>abuseipdb</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no ABUSEIPDB_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>shodan</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no SHODAN_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>otx</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no OTX_API_KEY</td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+    <p class="small">Pivot edges: <span class="chip">ptr → tor-exit-44.for-privacy.net</span></p>
+    
+  </div>
+  
+  <div class="panel">
+    <table>
+      <tr>
+        <td style="width:60%">
+          <strong style="font-size:16px"><code>phishy-login-portal.test</code></strong>
+          <span class="chip">domain</span>
+        </td>
+        <td class="small">Score 10/100 · confidence low</td>
+        <td style="text-align:right"><span class="lvl low">low</span></td>
+      </tr>
+    </table>
+
+    <p><strong>Assessment</strong></p>
+    <ul><li>Domain contains phishing-associated keyword</li><li>No CT-log certificates (very new or non-public host)</li></ul>
+
+    
+    <p><strong>MITRE ATT&CK</strong>:
+      <span class="chip">T1566 Phishing</span>
+    </p>
+    
+
+    <p><strong>Recommended actions</strong></p>
+    <ul><li>No action; record for context.</li></ul>
+
+    <p><strong>Sources</strong></p>
+    <table>
+      <thead><tr><th>Source</th><th>Status</th><th>Key facts</th></tr></thead>
+      <tbody>
+      
+        <tr>
+          <td>dns</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"A": [], "AAAA": [], "MX": [], "NS": [], "TXT": []}</code></td>
+        </tr>
+      
+        <tr>
+          <td>whois</td>
+          <td><span class="src-fail">failed</span></td>
+          <td class="small">Whois command returned no output</td>
+        </tr>
+      
+        <tr>
+          <td>crtsh</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"certificates": [], "count": 0, "subdomains": []}</code></td>
+        </tr>
+      
+        <tr>
+          <td>rdap</td>
+          <td><span class="src-fail">failed</span></td>
+          <td class="small">HTTP 404</td>
+        </tr>
+      
+        <tr>
+          <td>urlscan</td>
+          <td><span class="src-ok">ok</span></td>
+          <td class="small"><code>{"results": [], "total": 0}</code></td>
+        </tr>
+      
+        <tr>
+          <td>virustotal</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no VIRUSTOTAL_API_KEY</td>
+        </tr>
+      
+        <tr>
+          <td>otx</td>
+          <td><span class="src-skip">skipped</span></td>
+          <td class="small">no OTX_API_KEY</td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+    
+  </div>
+  
+
+  <div class="panel small">
+    Artifacts: <code>output\2026-06-22_15-08-38</code> — raw/ (per-source JSON), evidence.sqlite, graph.html,
+    stix_bundle.json, iocs.json. Analyst owns the final judgement; AI/automation only proposes.
+  </div>
+</main>
+</body>
+</html>

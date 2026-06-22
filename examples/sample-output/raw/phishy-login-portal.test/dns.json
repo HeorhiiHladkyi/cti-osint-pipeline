@@ -1,0 +1,14 @@
+{
+  "source": "dns",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "A": [],
+    "AAAA": [],
+    "MX": [],
+    "NS": [],
+    "TXT": []
+  },
+  "fetched_at": "2026-06-22T12:09:09.971698+00:00"
+}
