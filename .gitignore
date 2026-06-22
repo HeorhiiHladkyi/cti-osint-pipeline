@@ -5,3 +5,6 @@ output/
 .venv/
 venv/
 *.zip
+
+# pyvis offline assets
+lib/

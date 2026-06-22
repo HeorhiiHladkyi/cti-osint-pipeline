@@ -1,12 +1,8 @@
 {
   "source": "crtsh",
-  "ok": true,
+  "ok": false,
   "skipped": false,
-  "reason": null,
-  "data": {
-    "count": 0,
-    "certificates": [],
-    "subdomains": []
-  },
-  "fetched_at": "2026-06-22T12:09:06.926366+00:00"
+  "reason": "HTTP 502",
+  "data": {},
+  "fetched_at": "2026-06-22T12:21:37.793887+00:00"
 }

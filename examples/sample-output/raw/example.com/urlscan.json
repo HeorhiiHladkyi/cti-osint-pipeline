@@ -13,6 +13,16 @@
       },
       {
         "url": "https://example.com/",
+        "ip": "2606:4700:10::ac42:93f3",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
+        "ip": "2606:4700:10::ac42:93f3",
+        "server": "cloudflare"
+      },
+      {
+        "url": "https://example.com/",
         "ip": "104.20.23.154",
         "server": "cloudflare"
       },
@@ -45,18 +55,8 @@
         "url": "https://example.com/",
         "ip": "172.66.147.243",
         "server": "cloudflare"
-      },
-      {
-        "url": "https://www.example.com/",
-        "ip": "172.66.147.243",
-        "server": "cloudflare"
-      },
-      {
-        "url": "https://example.com/",
-        "ip": "104.20.23.154",
-        "server": "cloudflare"
       }
     ]
   },
-  "fetched_at": "2026-06-22T12:08:53.506376+00:00"
+  "fetched_at": "2026-06-22T12:21:36.659099+00:00"
 }

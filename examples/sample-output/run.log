@@ -1,26 +1,27 @@
-2026-06-22 15:08:38 | INFO     | Keys present: {'virustotal': False, 'abuseipdb': False, 'shodan': False, 'otx': False, 'urlscan': True}
-2026-06-22 15:08:40 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
-2026-06-22 15:08:40 | WARNING  | [abuseipdb] skipped: no ABUSEIPDB_API_KEY
-2026-06-22 15:08:40 | WARNING  | [shodan] skipped: no SHODAN_API_KEY
-2026-06-22 15:08:40 | WARNING  | [otx] skipped: no OTX_API_KEY
-2026-06-22 15:08:53 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
-2026-06-22 15:08:53 | WARNING  | [otx] skipped: no OTX_API_KEY
-2026-06-22 15:09:07 | WARNING  | [rdap] failed: HTTP 404
-2026-06-22 15:09:08 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
-2026-06-22 15:09:08 | WARNING  | [otx] skipped: no OTX_API_KEY
-2026-06-22 15:09:08 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
-2026-06-22 15:09:08 | WARNING  | [otx] skipped: no OTX_API_KEY
-2026-06-22 15:09:09 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
-2026-06-22 15:09:09 | WARNING  | [abuseipdb] skipped: no ABUSEIPDB_API_KEY
-2026-06-22 15:09:09 | WARNING  | [shodan] skipped: no SHODAN_API_KEY
-2026-06-22 15:09:09 | WARNING  | [otx] skipped: no OTX_API_KEY
-2026-06-22 15:09:09 | WARNING  | [whois] failed: Whois command returned no output
-2026-06-22 15:09:11 | WARNING  | [rdap] failed: HTTP 404
-2026-06-22 15:09:12 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
-2026-06-22 15:09:12 | WARNING  | [otx] skipped: no OTX_API_KEY
-2026-06-22 15:09:12 | INFO     | SQLite evidence DB written: evidence.sqlite
-2026-06-22 15:09:13 | INFO     | Interactive graph: graph.html
-2026-06-22 15:09:13 | INFO     | HTML report: output\2026-06-22_15-08-38\report.html
-2026-06-22 15:09:13 | WARNING  | weasyprint not installed — skipping PDF (HTML report is the primary output).
-2026-06-22 15:09:14 | INFO     | Evidence archive: output\2026-06-22_15-08-38.zip
-2026-06-22 15:09:14 | INFO     | Done. Overall threat level: LOW
+2026-06-22 15:21:30 | INFO     | Keys present: {'virustotal': False, 'abuseipdb': False, 'shodan': False, 'otx': False, 'urlscan': True}
+2026-06-22 15:21:32 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
+2026-06-22 15:21:32 | WARNING  | [abuseipdb] skipped: no ABUSEIPDB_API_KEY
+2026-06-22 15:21:32 | WARNING  | [shodan] skipped: no SHODAN_API_KEY
+2026-06-22 15:21:32 | WARNING  | [otx] skipped: no OTX_API_KEY
+2026-06-22 15:21:36 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
+2026-06-22 15:21:36 | WARNING  | [otx] skipped: no OTX_API_KEY
+2026-06-22 15:21:37 | WARNING  | [crtsh] failed: HTTP 502
+2026-06-22 15:21:38 | WARNING  | [rdap] failed: HTTP 404
+2026-06-22 15:21:38 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
+2026-06-22 15:21:38 | WARNING  | [otx] skipped: no OTX_API_KEY
+2026-06-22 15:21:38 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
+2026-06-22 15:21:38 | WARNING  | [otx] skipped: no OTX_API_KEY
+2026-06-22 15:21:39 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
+2026-06-22 15:21:39 | WARNING  | [abuseipdb] skipped: no ABUSEIPDB_API_KEY
+2026-06-22 15:21:39 | WARNING  | [shodan] skipped: no SHODAN_API_KEY
+2026-06-22 15:21:39 | WARNING  | [otx] skipped: no OTX_API_KEY
+2026-06-22 15:21:40 | WARNING  | [whois] failed: Whois command returned no output
+2026-06-22 15:21:40 | WARNING  | [rdap] failed: HTTP 404
+2026-06-22 15:21:41 | WARNING  | [virustotal] skipped: no VIRUSTOTAL_API_KEY
+2026-06-22 15:21:41 | WARNING  | [otx] skipped: no OTX_API_KEY
+2026-06-22 15:21:41 | INFO     | SQLite evidence DB written: evidence.sqlite
+2026-06-22 15:21:41 | INFO     | Interactive graph: graph.html
+2026-06-22 15:21:41 | INFO     | HTML report: output\2026-06-22_15-21-30\report.html
+2026-06-22 15:21:41 | WARNING  | weasyprint not installed — skipping PDF (HTML report is the primary output).
+2026-06-22 15:21:42 | INFO     | Evidence archive: output\2026-06-22_15-21-30.zip
+2026-06-22 15:21:42 | INFO     | Done. Overall threat level: LOW

@@ -71,7 +71,9 @@ def export_json(g: nx.Graph) -> dict:
 
 def render_pyvis(g: nx.Graph, path: str) -> None:
     from pyvis.network import Network
-    net = Network(height="720px", width="100%", bgcolor="#0f1729", font_color="#d7def0", directed=False)
+    # cdn_resources='remote' -> single self-contained HTML (no local lib/ folder)
+    net = Network(height="720px", width="100%", bgcolor="#0f1729", font_color="#d7def0",
+                  directed=False, cdn_resources="remote")
     net.barnes_hut(gravity=-8000, spring_length=120)
     for n in g.nodes:
         kind = g.nodes[n].get("kind", "host")

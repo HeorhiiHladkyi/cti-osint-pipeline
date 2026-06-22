@@ -35,7 +35,7 @@
     "confidence": "low",
     "mitre_attack": [],
     "reasons": [
-      "No CT-log certificates (very new or non-public host)"
+      "No malicious signals from queried sources"
     ],
     "recommendations": [
       "No action; record for context."
