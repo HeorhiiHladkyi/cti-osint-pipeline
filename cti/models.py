@@ -35,6 +35,7 @@ class IoCResult(BaseModel):
     asn: str | None = None
     network_country: str | None = None
     cdn: str | None = None  # CDN provider name if the IP is a CDN edge (origin hidden)
+    origin_candidates: list[dict] = Field(default_factory=list)  # probable origin IPs behind a CDN
 
 
 class Report(BaseModel):

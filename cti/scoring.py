@@ -80,6 +80,13 @@ def score_ioc(r: IoCResult) -> IoCResult:
             r.cdn = net["cdn"]
             reasons.append(f"IP {net['ip']} належить CDN «{net['cdn']}» — реальний origin приховано")
 
+    oh = _data(r.sources, "origin_hunt")
+    if oh and oh.get("candidates"):
+        r.origin_candidates = oh["candidates"]
+        ips = ", ".join(c["ip"] for c in r.origin_candidates[:3])
+        note = "ймовірний origin за CDN" if oh.get("cdn_fronted") else "субдомени з власним хостингом"
+        reasons.append(f"Origin-hunting ({note}): {ips}")
+
     score = max(0, min(100, score))
     has_data = any(s.ok and s.data for s in r.sources)
     level = (

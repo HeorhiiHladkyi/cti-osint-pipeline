@@ -26,16 +26,6 @@
       "level": "unknown"
     },
     {
-      "id": "*.example.com",
-      "kind": "subdomain",
-      "level": "unknown"
-    },
-    {
-      "id": "AS207960 Test Intermediate - example.com",
-      "kind": "subdomain",
-      "level": "unknown"
-    },
-    {
       "id": "dev.example.com",
       "kind": "subdomain",
       "level": "unknown"
@@ -46,27 +36,12 @@
       "level": "unknown"
     },
     {
-      "id": "m.testexample.com",
-      "kind": "subdomain",
-      "level": "unknown"
-    },
-    {
       "id": "products.example.com",
       "kind": "subdomain",
       "level": "unknown"
     },
     {
-      "id": "subjectname@example.com",
-      "kind": "subdomain",
-      "level": "unknown"
-    },
-    {
       "id": "support.example.com",
-      "kind": "subdomain",
-      "level": "unknown"
-    },
-    {
-      "id": "user@example.com",
       "kind": "subdomain",
       "level": "unknown"
     },
@@ -129,16 +104,6 @@
     },
     {
       "source": "example.com",
-      "target": "*.example.com",
-      "rel": "ct_cert"
-    },
-    {
-      "source": "example.com",
-      "target": "AS207960 Test Intermediate - example.com",
-      "rel": "ct_cert"
-    },
-    {
-      "source": "example.com",
       "target": "dev.example.com",
       "rel": "ct_cert"
     },
@@ -149,27 +114,12 @@
     },
     {
       "source": "example.com",
-      "target": "m.testexample.com",
-      "rel": "ct_cert"
-    },
-    {
-      "source": "example.com",
       "target": "products.example.com",
       "rel": "ct_cert"
     },
     {
       "source": "example.com",
-      "target": "subjectname@example.com",
-      "rel": "ct_cert"
-    },
-    {
-      "source": "example.com",
       "target": "support.example.com",
-      "rel": "ct_cert"
-    },
-    {
-      "source": "example.com",
-      "target": "user@example.com",
       "rel": "ct_cert"
     },
     {

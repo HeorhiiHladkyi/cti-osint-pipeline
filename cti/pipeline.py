@@ -10,6 +10,7 @@ from .models import IoCResult, Report
 from .ioc import detect_type
 from .collectors import collectors_for
 from .scoring import score_ioc
+from .origin import origin_hunt
 from . import graph as graphmod
 from . import stix as stixmod
 from . import storage, report as reportmod
@@ -40,6 +41,12 @@ def run_pipeline(indicators: list[str], base: str = "output") -> tuple[Report, d
                 res.sources.append(fn(raw, itype))
             except Exception as e:  # never let one source crash the run
                 logger.error(f"[{name}] crashed on {raw}: {e}")
+        # origin-hunting needs crtsh + network already collected → run after the loop
+        if itype in ("domain", "url"):
+            try:
+                res.sources.append(origin_hunt(res))
+            except Exception as e:
+                logger.error(f"[origin_hunt] crashed on {raw}: {e}")
         # ── Step 2: STORAGE (per-IoC raw artifacts) ─────────────────────
         storage.save_raw(run_dir, res)
         results.append(res)

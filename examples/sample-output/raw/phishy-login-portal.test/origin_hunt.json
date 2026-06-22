@@ -1,0 +1,12 @@
+{
+  "source": "origin_hunt",
+  "ok": true,
+  "skipped": false,
+  "reason": null,
+  "data": {
+    "checked": 0,
+    "cdn_fronted": false,
+    "candidates": []
+  },
+  "fetched_at": "2026-06-22T13:40:17.202387+00:00"
+}

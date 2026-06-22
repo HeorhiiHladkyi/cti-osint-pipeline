@@ -2,7 +2,7 @@
   "source": "crtsh",
   "ok": false,
   "skipped": false,
-  "reason": "HTTP 404",
+  "reason": "HTTP 502",
   "data": {},
-  "fetched_at": "2026-06-22T13:33:18.780809+00:00"
+  "fetched_at": "2026-06-22T13:40:07.469320+00:00"
 }

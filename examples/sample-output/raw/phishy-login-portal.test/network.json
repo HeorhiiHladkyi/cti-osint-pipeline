@@ -4,5 +4,5 @@
   "skipped": false,
   "reason": "no A record: The DNS query name does not exist: phishy-login-portal.test.",
   "data": {},
-  "fetched_at": "2026-06-22T13:33:23.137856+00:00"
+  "fetched_at": "2026-06-22T13:40:13.163561+00:00"
 }

@@ -63,6 +63,12 @@
     </p>
     {% endif %}
 
+    {% if ioc.origin_candidates %}
+    <p class="small"><strong>Ймовірний origin (субдомени повз CDN):</strong>
+      {% for c in ioc.origin_candidates %}<span class="chip">{{ c.subdomain }} → {{ c.ip }}{% if c.asn %} ({{ c.asn }}){% endif %}</span>{% endfor %}
+    </p>
+    {% endif %}
+
     <p><strong>Оцінка</strong></p>
     <ul>{% for reason in ioc.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>
 

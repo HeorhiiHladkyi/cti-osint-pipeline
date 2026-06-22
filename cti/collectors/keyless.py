@@ -75,7 +75,12 @@ def crtsh(indicator: str, ioc_type: str) -> SourceResult:
             continue
         seen.add(key)
         certs.append({"name_value": name, "issuer": issuer, "not_before": row.get("not_before")})
-    subdomains = sorted({n for c in certs for n in c["name_value"].split("\n") if host in n})
+    host_l = host.lower()
+    subdomains = sorted({
+        s for c in certs for raw in c["name_value"].split("\n")
+        for s in [raw.strip().lower().lstrip("*.")]
+        if s and (s == host_l or s.endswith("." + host_l))  # proper subdomain, not substring
+    })
     return ok("crtsh", {"count": len(certs), "certificates": certs[:50], "subdomains": subdomains[:100]})
 
 
@@ -139,6 +144,21 @@ def _cymru_asn(ip: str):
         return None
 
 
+def cdn_for(asn, as_name: str = "") -> str | None:
+    """Return CDN provider name if this ASN/owner is a true reverse-proxy CDN, else None."""
+    try:
+        a = int(str(asn).replace("AS", ""))
+    except (TypeError, ValueError):
+        a = None
+    if a in CDN_ASN:
+        return CDN_ASN[a]
+    low = (as_name or "").lower()
+    for kw in CDN_KEYWORDS:
+        if kw in low:
+            return kw.capitalize()
+    return None
+
+
 def network(indicator: str, ioc_type: str) -> SourceResult:
     """Establish the target IP + its ASN/owner, and flag CDN (origin-hidden) edges."""
     if ioc_type == "ipv4":
@@ -157,11 +177,7 @@ def network(indicator: str, ioc_type: str) -> SourceResult:
     cymru = _cymru_asn(ip) or {}
     asn = cymru.get("asn")
     as_name = cymru.get("as_name") or ""
-    cdn = None
-    if asn and asn.isdigit() and int(asn) in CDN_ASN:
-        cdn = CDN_ASN[int(asn)]
-    elif any(kw in as_name.lower() for kw in CDN_KEYWORDS):
-        cdn = next(kw.capitalize() for kw in CDN_KEYWORDS if kw in as_name.lower())
+    cdn = cdn_for(asn, as_name)
     return ok("network", {
         "ip": ip, "asn": f"AS{asn}" if asn else None, "as_name": as_name or None,
         "country": cymru.get("country"), "prefix": cymru.get("prefix"),

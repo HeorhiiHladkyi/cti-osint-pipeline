@@ -1,8 +1,11 @@
 {
   "source": "urlscan",
-  "ok": false,
+  "ok": true,
   "skipped": false,
-  "reason": "HTTP 400",
-  "data": {},
-  "fetched_at": "2026-06-22T13:33:32.829419+00:00"
+  "reason": null,
+  "data": {
+    "total": 0,
+    "results": []
+  },
+  "fetched_at": "2026-06-22T13:40:17.193782+00:00"
 }

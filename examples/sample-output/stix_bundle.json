@@ -1,14 +1,14 @@
 {
   "type": "bundle",
-  "id": "bundle--c55fb7f5-6a77-43d2-8918-a41f3f7f986b",
+  "id": "bundle--e0254ab0-55db-4571-b881-f40aa316c6b5",
   "spec_version": "2.1",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--01d2a85a-ffc0-4fa6-a2aa-7459c7aca449",
-      "created": "2026-06-22T13:33:32.000Z",
-      "modified": "2026-06-22T13:33:32.000Z",
+      "id": "indicator--ce848c94-9c7a-4d34-b7bc-58a11716478f",
+      "created": "2026-06-22T13:40:17.000Z",
+      "modified": "2026-06-22T13:40:17.000Z",
       "name": "ipv4: 8.8.8.8",
       "description": "Жодних шкідливих сигналів від опитаних джерел",
       "indicator_types": [
@@ -16,7 +16,7 @@
       ],
       "pattern": "[ipv4-addr:value = '8.8.8.8']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:33:32.000Z",
+      "valid_from": "2026-06-22T13:40:17.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -27,17 +27,17 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3fb829c0-5156-454d-8082-e5b7043b1d2c",
-      "created": "2026-06-22T13:33:32.000Z",
-      "modified": "2026-06-22T13:33:32.000Z",
+      "id": "indicator--af2b02b6-e1ca-41a2-b801-740ca74e223c",
+      "created": "2026-06-22T13:40:17.000Z",
+      "modified": "2026-06-22T13:40:17.000Z",
       "name": "domain: example.com",
-      "description": "IP 172.66.147.243 належить CDN «Cloudflare» — реальний origin приховано",
+      "description": "IP 104.20.23.154 належить CDN «Cloudflare» — реальний origin приховано",
       "indicator_types": [
         "benign"
       ],
       "pattern": "[domain-name:value = 'example.com']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:33:32.000Z",
+      "valid_from": "2026-06-22T13:40:17.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -48,9 +48,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--50efd89c-9128-47fd-87ff-e14f4c887ec0",
-      "created": "2026-06-22T13:33:32.000Z",
-      "modified": "2026-06-22T13:33:32.000Z",
+      "id": "indicator--4a066836-eaad-4502-b157-ed2bea0cf96f",
+      "created": "2026-06-22T13:40:17.000Z",
+      "modified": "2026-06-22T13:40:17.000Z",
       "name": "url: http://testphp.vulnweb.com/",
       "description": "Жодних шкідливих сигналів від опитаних джерел",
       "indicator_types": [
@@ -58,7 +58,7 @@
       ],
       "pattern": "[url:value = 'http://testphp.vulnweb.com/']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:33:32.000Z",
+      "valid_from": "2026-06-22T13:40:17.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -69,9 +69,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a933580e-9f9d-4c2e-b770-42fc477fb05d",
-      "created": "2026-06-22T13:33:32.000Z",
-      "modified": "2026-06-22T13:33:32.000Z",
+      "id": "indicator--0ee5492d-3403-4d28-93c2-10bbf2ea15e9",
+      "created": "2026-06-22T13:40:17.000Z",
+      "modified": "2026-06-22T13:40:17.000Z",
       "name": "md5: 44d88612fea8a8f36de82e1278abb02f",
       "description": "Джерела не повернули даних",
       "indicator_types": [
@@ -79,7 +79,7 @@
       ],
       "pattern": "[file:hashes.MD5 = '44d88612fea8a8f36de82e1278abb02f']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:33:32.000Z",
+      "valid_from": "2026-06-22T13:40:17.000Z",
       "confidence": 0,
       "labels": [
         "benign"
@@ -90,9 +90,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b1c87524-ec85-404c-99eb-314d68a7fea2",
-      "created": "2026-06-22T13:33:32.000Z",
-      "modified": "2026-06-22T13:33:32.000Z",
+      "id": "indicator--75c232b0-31b9-43ec-89b5-ab8ef112530e",
+      "created": "2026-06-22T13:40:17.000Z",
+      "modified": "2026-06-22T13:40:17.000Z",
       "name": "ipv4: 185.220.101.44",
       "description": "Жодних шкідливих сигналів від опитаних джерел",
       "indicator_types": [
@@ -100,7 +100,7 @@
       ],
       "pattern": "[ipv4-addr:value = '185.220.101.44']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:33:32.000Z",
+      "valid_from": "2026-06-22T13:40:17.000Z",
       "confidence": 20,
       "labels": [
         "benign"
@@ -111,9 +111,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5c60c67e-c832-4717-a26c-728300ca4280",
-      "created": "2026-06-22T13:33:32.000Z",
-      "modified": "2026-06-22T13:33:32.000Z",
+      "id": "indicator--4c492ef5-c12b-481b-8e37-cc4e866f3d2c",
+      "created": "2026-06-22T13:40:17.000Z",
+      "modified": "2026-06-22T13:40:17.000Z",
       "name": "domain: phishy-login-portal.test",
       "description": "Домен містить ключове слово, типове для фішингу; Немає сертифікатів у CT-логах (дуже новий або непублічний хост)",
       "indicator_types": [
@@ -121,7 +121,7 @@
       ],
       "pattern": "[domain-name:value = 'phishy-login-portal.test']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T13:33:32.000Z",
+      "valid_from": "2026-06-22T13:40:17.000Z",
       "confidence": 20,
       "labels": [
         "benign"

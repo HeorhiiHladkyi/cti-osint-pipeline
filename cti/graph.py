@@ -58,6 +58,9 @@ def build_graph(results: list[IoCResult]) -> nx.Graph:
         if ab.get("domain"):
             link(ab["domain"], "domain", "abuse_domain")
 
+        for c in _data(r, "origin_hunt").get("candidates", []):
+            link(c.get("ip"), "ip", "origin_candidate")
+
         r.related = edges
     return g
 

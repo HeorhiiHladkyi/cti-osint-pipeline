@@ -64,6 +64,7 @@ def to_ioc_json(results: list[IoCResult]) -> list[dict]:
         "asn": r.asn,
         "network_country": r.network_country,
         "cdn": r.cdn,
+        "origin_candidates": r.origin_candidates,
         "mitre_attack": r.mitre,
         "reasons": r.reasons,
         "recommendations": r.recommendations,
